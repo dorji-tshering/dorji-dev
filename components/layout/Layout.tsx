@@ -9,10 +9,14 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
     const [notice, showNotice] = useState(false);
     const [noticeMessage, setNoticeMessage] = useState('');
+    const [success, isSuccess] = useState(false);
+    const [error, isError] = useState(false);
 
     const contextValue = {
         showNotice: showNotice,
-        setNoticeMessage: setNoticeMessage
+        setNoticeMessage: setNoticeMessage,
+        isSuccess: isSuccess,
+        isError: isError,
     }
  
     return (
@@ -20,10 +24,17 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
             <MobileHeader onMenuClick={() => setShowMenu(true)}/>
             <DesktopSidebar/>
             <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu}/>
-            { notice && <Notice message={noticeMessage}/>}
 
-            <div className="overflow-y-auto flex-1">
+            <div className="overflow-y-auto relative flex-1">
                 <NoticeProvider value={contextValue}>
+                    { 
+                        notice && 
+                        <Notice 
+                            message={noticeMessage} 
+                            success={success ? true : undefined} 
+                            error={error ? true : undefined}
+                            />
+                    }
                     { children }
                 </NoticeProvider>
             </div>

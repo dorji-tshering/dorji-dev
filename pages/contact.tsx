@@ -1,6 +1,8 @@
 import { DM_Sans } from "@next/font/google";
 import { FormEvent, useState } from "react";
+import { useNoticeContext } from "../components/utils/NoticeContext";
 import sendEmail from "../components/utils/SendEmail";
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 const DMSans = DM_Sans({
     weight: '400'
@@ -11,15 +13,23 @@ const contact = () => {
     const [email, setEmail] = useState<string>('');
     const [subject, setSubject] = useState<string>('');
     const [message, setMessage] = useState<string>('');
+    const [isLoading, setLoading] = useState<boolean>(false);
     
+    const { showNotice, setNoticeMessage, isSuccess, isError } = useNoticeContext();
 
     const send = (event: FormEvent) => {
         event.preventDefault();
-        console.log(name, email, subject, message);
+        setLoading(true);
         sendEmail(name, email, subject, message).then(res => {
-            console.log(res);
+            setNoticeMessage('I have received your message. Thank you for reaching out. Will get back to you as soon as I can.');
+            showNotice(true);
+            isSuccess(true);
+            setLoading(false);
         }).catch(err => {
-            console.log(err);
+            setNoticeMessage('Oops, something is not right. Can you try again please?');
+            showNotice(true);
+            isError(true);
+            setLoading(false);
         });
     }
 
@@ -45,6 +55,7 @@ const contact = () => {
                             id="name" 
                             placeholder="Name"
                             onChange={(ev) => setName(ev.currentTarget.value)}
+                            required
                         />
                         <input 
                             className={`${DMSans.className} formInput form-input !rounded w-full sm:w-[49%] lg:mt-0`}
@@ -53,6 +64,7 @@ const contact = () => {
                             id="email" 
                             placeholder="Email"
                             onChange={(ev) => setEmail(ev.currentTarget.value)}
+                            required
                         />
                     </div>
                     <input 
@@ -61,6 +73,7 @@ const contact = () => {
                         name="subject"
                         placeholder="Subject"
                         onChange={(ev) => setSubject(ev.currentTarget.value)}
+                        required
                     />
                     <textarea 
                         className={`${DMSans.className} formInput form-textarea !rounded w-full resize-y`} 
@@ -68,12 +81,23 @@ const contact = () => {
                         id="message" 
                         rows={6} 
                         placeholder="Message"
-                        onChange={(ev) => setMessage(ev.currentTarget.value)}></textarea>
+                        onChange={(ev) => setMessage(ev.currentTarget.value)}
+                        required></textarea>
                     <button 
                         data-mdb-ripple="true"
                         data-mdb-ripple-color="light"
-                        className="!bg-theme border-0 ml-auto ripple relative overflow-hidden rounded
-                        text-white px-5 py-2 block cursor-pointer" type="submit">Send Message</button>
+                        disabled={isLoading ? true : false}
+                        className={`!bg-theme flex items-center border-0 ml-auto ripple relative overflow-hidden rounded
+                        text-white px-5 py-2 text-xs tracking-wider hover:!bg-theme/80
+                        transition-all duration-300 ${isLoading ? 'cursor-not-allowed' : ''}`} type="submit">
+                            SEND MESSAGE 
+                            {
+                                isLoading && <AiOutlineLoading3Quarters
+                                className="animate-spin ml-2" 
+                                size={16}
+                            />
+                            }
+                    </button>
                 </form>
             </section>
         </div>

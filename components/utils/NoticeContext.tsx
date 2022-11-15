@@ -5,12 +5,14 @@ interface Props {
     value: {
         showNotice: Dispatch<SetStateAction<boolean>>
         setNoticeMessage: Dispatch<SetStateAction<string>>
+        isSuccess: Dispatch<SetStateAction<boolean>>
+        isError: Dispatch<SetStateAction<boolean>>
     }
 }
 
-const NoticeContext = createContext<any>(null);
+export const NoticeContext = createContext<any>(null);
 
-export const NoticeProvider = ({ children, value}: Props) => {
+export const NoticeProvider = ({ children, value }: Props) => {
     return (
         <NoticeContext.Provider value={value}>
             { children }
