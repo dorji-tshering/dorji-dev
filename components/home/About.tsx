@@ -17,8 +17,8 @@ const About = () => {
                 I am a college dropout and hence a self-taught developer. I started learning
                 web development at the start of 2020. Prior to that, I have had a little bit of experience
                 coding in C language as taught in the college. Within the span of almost two years, 
-                I have made myself familiar with Fronted, Backend, Mobile Application, and Wordpress development
-                via personal projects mostly and a client project on Wordpress. However, as time went by, I have 
+                I have made myself familiar with Frontend, Backend, Mobile Application, and Wordpress development
+                via personal projects mostly and a few client projects. However, as time went by, I have 
                 committed myself fully to the Frontend aspect of the web development which I truly enjoy. 
             </p>
         </div>
