@@ -23,7 +23,7 @@ const Projects = () => {
             featured: true,
             github: 'https://github.com/dorji-tshering/flash-card',
             hostedLink: 'https://flash-card-seven.vercel.app/',
-            techStacks: ['NextJs', 'Firebase'],
+            techStacks: ['NextJs', 'Firebase', 'ReactJs'],
             prioritize: false,
         },
         {
@@ -42,7 +42,7 @@ const Projects = () => {
             featured: false,
             github: 'https://github.com/dorji-tshering/chit-chat',
             hostedLink: '',
-            techStacks: ['NextJs', 'Getstream-io'],
+            techStacks: ['NextJs', 'Getstream-io', 'ReactJs'],
             prioritize: true,
         },
         {
@@ -91,13 +91,13 @@ const Projects = () => {
                 'Add, update, delete, and retrieve a user',
                 'Add, update, delete, and retrieve a product',
                 'Create, cancel, and retrieve orders',
-                'Authentication and authorization with JWT and PassportStrategy'
+                'Authentication and authorization with JWT and Passport'
             ],
             category: 'Backend Development',
             featured: false,
             github: 'https://github.com/dorji-tshering/E-Commerce-API',
             hostedLink: '',
-            techStacks: ['NestJs', 'TypeORM', 'Passport'],
+            techStacks: ['NestJs', 'TypeORM', 'MySQL'],
             prioritize: true,
         },
     ]
