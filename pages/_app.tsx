@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <main>
             <Head>
                 <title>Dorji Tshering</title> 
-                <link rel="icon" href="/images/portfolio-logo.png" />
+                <link rel="icon" href="/images/logo.png" />
             </Head>
             <Layout>
                 <Component {...pageProps} />
