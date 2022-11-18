@@ -14,12 +14,13 @@
 }
 
 .homeSectionContainer {
-    @apply bg-cover px-4 py-16 md:px-8
+    @apply px-4 py-20 md:px-8 border-solid border-0 border-b
+    border-b-gray-600
 }
 
 .techStack {
-    @apply mx-3 mb-8 py-2 bg-gray-700/50 border 
-    border-solid border-gray-500 rounded-sm text-center min-w-[100px]
+    @apply mx-3 mb-8 py-[6px] px-3 bg-gray-700/80 text-sm
+    rounded-sm text-center shadow-sm shadow-black
 }
 
 .formInput {
@@ -53,9 +54,15 @@ select:-webkit-autofill:focus {
 
 
 /* base styles */
+html {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
 body {
     font-size: 16px;
-    color: rgb(255, 255, 255);
+    color: rgb(236, 236, 236);
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 body, p, li, ul {

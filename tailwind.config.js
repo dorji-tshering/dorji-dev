@@ -14,25 +14,30 @@ module.exports = {
                 'lightGray': '#989797',
                 'lightBorder': '#413F3F',
             },
-            backgroundImage: {
-                'bgLanding': "url('/images/landing-bg.jpeg')",
-                'bgAbout': "url('/images/about-bg.jpeg')",
-                'bgContact': "url('/images/contact-bg.jpeg')",
-                'bgProject': "url('/images/project-bg.jpeg')",
-                'bgSkills': "url('/images/skills-bg.jpeg')",
-                'bgTechStack': "url('/images/tech-stack-bg.jpeg')",
-            },
             boxShadow: {
                 'nailShadow': "0px 0px 22px 9px #ff4d06"
             },
             keyframes: {
                 rippleKeyframe: {
-                    '0%': {transform: 'scale(0)'},
-                    '100%': {transform: 'scale(2)', opacity: '0'},
-                }
+                    '0%': {
+                        transform: 'scale(0)'
+                    },
+                    '100%': {
+                        transform: 'scale(2)', opacity: '0'
+                    },
+                },
+                glow: {
+                    '0%': {
+                      textShadow: '0 0 10px #2d9da9'
+                    },
+                    "100%": {
+                      textShadow: '0 0 20px #34b3c1, 0 0 10px #4dbbc7'
+                    }
+                  }
             },
             animation: {
-                rippleAnimation: 'rippleKeyframe 650ms ease-in-out'
+                rippleAnimation: 'rippleKeyframe 650ms ease-in-out',
+                textGlow: 'glow 2s ease-in-out infinite alternate',
             },
         },
     },

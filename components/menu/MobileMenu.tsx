@@ -2,13 +2,8 @@ import Link from "next/link"
 import { BsGithub } from "react-icons/bs"
 import { DiCode } from "react-icons/di"
 import { GrTwitter } from "react-icons/gr"
-import { Crimson_Text } from '@next/font/google';
 import { Dispatch, SetStateAction, useEffect } from "react"; 
 import rippleEffect from '../utils/RippleEffect';
-
-const Crimson = Crimson_Text({
-    weight: '400',
-});
 
 interface Props {
     showMenu: boolean 
@@ -19,7 +14,7 @@ const MobileMenu = ({ showMenu, setShowMenu }: Props) => {
     useEffect(() =>{
         rippleEffect();
     }, [])
-
+ 
     return (
         <div className={`fixed z-[100] transform h-screen w-screen md:hidden
             ${!showMenu && '-translate-x-full'} ${showMenu && 'bg-black/60'} 
@@ -31,10 +26,10 @@ const MobileMenu = ({ showMenu, setShowMenu }: Props) => {
 
                 {/* logo */}
                 <div className="bg-darkBg px-7 py-7 text-center">
-                    <Link onClick={() => setShowMenu(false)} className="text-[18px] mt-1" href='/'>
+                    <Link onClick={() => setShowMenu(false)} className="text-[18px] mt-1 font-[600]" href='/'>
                         <span className="text-theme">Dorji</span> <span>Tshering</span>
                     </Link>
-                    <p className={`${Crimson.className} text-lightGray text-xs mt-1`}>web developer</p>
+                    <p className="text-lightGray text-xs mt-1 font-[mali]">web developer</p>
                     <DiCode className="mx-auto" size={28} color="#989797"/>
                 </div>
                 {/* menu */}
@@ -48,17 +43,15 @@ const MobileMenu = ({ showMenu, setShowMenu }: Props) => {
                     </div>
                     {/* social */}
                     <div className="flex justify-center">
-                        <Link className="socialLink mr-3" target="_blank" href="https://twitter.com/dorjidev">
+                        <Link className="socialLink mx-3" target="_blank" href="https://twitter.com/dorjidev">
                             <GrTwitter size={24}/>
                         </Link>
-                        <Link className="socialLink ml-3" target="_blank" href="https://github.com/dorji-tshering">
+                        <Link className="socialLink mx-3" target="_blank" href="https://github.com/dorji-tshering">
                             <BsGithub size={24}/>
                         </Link>
                     </div>
                     <Link 
-                        className="mx-auto block w-fit my-10 text-gray-400 hover:tracking-widest
-                            hover:underline hover:underline-offset-4 hover:decoration-dotted
-                            transition-all duration-300 ease-out" 
+                        className="mx-auto block w-fit my-10 text-gray-400" 
                         target="_blank" 
                         href="https://nextjs.org/">
                         Made with NextJs

@@ -20,7 +20,7 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
     }
  
     return (
-        <div className="flex flex-col md:flex-row md:h-screen bg-black">
+        <div className="flex flex-col md:flex-row md:h-screen">
             <MobileHeader onMenuClick={() => setShowMenu(true)}/>
             <DesktopSidebar/>
             <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu}/>

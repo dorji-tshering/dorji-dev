@@ -1,12 +1,7 @@
-import { DM_Sans } from "@next/font/google";
 import { FormEvent, useState } from "react";
 import sendEmail from '../utils/SendEmail';
 import { useNoticeContext } from "../utils/NoticeContext";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-
-const DMSans = DM_Sans({
-    weight: '400'
-});
 
 const Contact = () => {
     const [name, setName] = useState<string>('');
@@ -34,8 +29,8 @@ const Contact = () => {
     }
     
     return (
-        <div className="homeSectionContainer bg-bgContact">
-            <h3 className="text-center text-gray-300 mb-10">CONTACT ME</h3>
+        <div className="homeSectionContainer !border-b-0">
+            <h3 className="text-center text-xl mb-10 font-[600]">CONTACT ME</h3>
             <section className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between">
                 <div className="sm:w-[40%] md:w-[100%] lg:w-[40%] px-6">
                     <p className="text-center sm:text-left md:text-center lg:text-left">I am interested in frontend and wordpress projects. If you you want to 
@@ -49,7 +44,7 @@ const Contact = () => {
                 <form className="mx-auto sm:w-[60%] md:w-[100%] lg:w-[60%] px-6" onSubmit={send}>
                     <div className="flex flex-col md:flex-row justify-between">
                         <input 
-                            className={`${DMSans.className} formInput form-input !rounded sm:mt-0 md:w-[49%]`} 
+                            className={`formInput form-input !rounded sm:mt-0 md:w-[49%]`} 
                             type="text" 
                             name="name" 
                             id="name" 
@@ -58,7 +53,7 @@ const Contact = () => {
                             required
                         />
                         <input 
-                            className={`${DMSans.className} formInput form-input !rounded sm:mt-0 md:w-[49%]`}
+                            className={`formInput form-input !rounded sm:mt-0 md:w-[49%]`}
                             type="email" 
                             name="email" 
                             id="email" 
@@ -66,16 +61,16 @@ const Contact = () => {
                             onChange={(ev) => setEmail(ev.currentTarget.value)}
                             required
                         />
-                    </div>
+                    </div> 
                     <input 
-                        className={`${DMSans.className} formInput form-input !rounded w-full`}
+                        className={`formInput form-input !rounded w-full`}
                         type="text" 
                         placeholder="Subject"
                         onChange={(ev) => setSubject(ev.currentTarget.value)}
                         required
                     />
                     <textarea 
-                        className={`${DMSans.className} formInput form-textarea !rounded w-full resize-y`} 
+                        className={`formInput form-textarea !rounded w-full resize-y`} 
                         name="message" 
                         id="message" 
                         rows={6} placeholder="Message"
@@ -86,9 +81,9 @@ const Contact = () => {
                         data-mdb-ripple-color="light"
                         disabled={isLoading ? true : false}
                         className={`!bg-theme flex items-center border-0 ml-auto ripple relative overflow-hidden rounded
-                        text-white px-5 py-2 text-xs tracking-wider hover:!bg-theme/80
-                        transition-all duration-300 ${isLoading ? 'cursor-not-allowed' : ''}`} type="submit">
-                            SEND MESSAGE
+                        text-white px-5 py-3 text-xs tracking-wider hover:!bg-theme/80 mt-2
+                        transition-all duration-300 font-[500] ${isLoading ? 'cursor-not-allowed' : ''}`} type="submit">
+                            Send Message
                             {
                                 isLoading && <AiOutlineLoading3Quarters
                                 className="animate-spin ml-2" 

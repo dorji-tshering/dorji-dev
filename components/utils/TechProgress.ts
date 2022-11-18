@@ -3,32 +3,38 @@ const TechProgress = () => {
         {
             name: 'HTML',
             progress: 'w-[70%]',
-            color: 'bg-[#FF4D06]'
+            color: 'bg-[#FF4D06]',
+            rating: 75
         },
         {
-            name: 'CSS',
-            progress: 'w-[90%]',
-            color: 'bg-[#FF6F06]'
+            name: 'CSS', 
+            progress: 'w-[75%]',
+            color: 'bg-[#FF6F06]',
+            rating: 75
         },
         {
             name: 'JAVASCRIPT',
-            progress: 'w-[60%]',
-            color: 'bg-[#FF7E06]'
+            progress: 'w-[70%]',
+            color: 'bg-[#FF7E06]',
+            rating: 70
         },
         {
             name: 'TYPESCRIPT',
-            progress: 'w-[50%]',
-            color: 'bg-[#FF9B06]'
+            progress: 'w-[60%]',
+            color: 'bg-[#FF9B06]',
+            rating: 60
         },
         {
-            name: 'REACT',
-            progress: 'w-[75%]',
-            color: 'bg-[#FFAA06]'
+            name: 'REACTJS',
+            progress: 'w-[65%]',
+            color: 'bg-[#FFAA06]',
+            rating: 65
         },
         {
-            name: 'NEXT',
-            progress: 'w-[80%]',
-            color: 'bg-[#FFE606]'
+            name: 'NEXTJS',
+            progress: 'w-[65%]',
+            color: 'bg-[#FFE606]',
+            rating: 65
         },
     ]
 }

@@ -53,15 +53,15 @@ const ProjectDetails = () => {
                 <>
                     <section>
                         <div className="flex items-center flex-wrap relative pr-11">
-                            <h1 className="mb-3 text-xl md:text-2xl mr-6">{project.title}</h1>
-                            <p className="mb-3 text-xs bg-gray-600 px-3 py-1 rounded">{project.category}</p>
+                            <h1 className="mb-4 text-xl md:text-2xl mr-6 font-[600]">{project.title}</h1>
+                            <p className="mb-4 text-xs bg-gray-600 px-3 py-1 rounded">{project.category}</p>
                             <button 
                                 className="absolute right-0 top-0 text-xl text-gray-300 h-8
                                     w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg
                                   hover:bg-gray-700 transition-all duration-300"
                                 onClick={() => router.back()}><IoMdArrowBack /></button>
                         </div>
-                        <div className="flex mb-4">
+                        <div className="flex mb-5 text-sm">
                             <Link 
                                 className="flex items-center mr-6 text-gray-400 hover:text-theme 
                                     transition-all duration-300 ease-out" 
@@ -83,7 +83,7 @@ const ProjectDetails = () => {
                                 project.techStacks.map((stack, idx) => (
                                     <p 
                                         className="text-sm text-gray-200 mb-4 mr-4 border border-solid border-gray-600 rounded
-                                            px-3 py-1" 
+                                            px-2 py-[2px]" 
                                         key={idx}>{stack}</p>
                                 ))
                             }
@@ -113,7 +113,7 @@ const ProjectDetails = () => {
                     </section>
                     <section>
                         {
-                            languagePer.length > 0 &&
+                            languagePer.length > 0 ?
                             <>
                                 <h3 className="text-xl mb-3 text-gray-300">Languages</h3>
                                 <div className="flex flex-wrap">
@@ -122,12 +122,14 @@ const ProjectDetails = () => {
                                             <p 
                                                 className="flex items-center mr-3 text-sm mb-3"
                                                 key={idx}><GoPrimitiveDot className="mr-2" color={colors[idx]}/>
-                                                    <span className="font-[500] text-gray-100">{lang.name}</span> <span className="ml-2 text-gray-300">{lang.percentage}%</span>
+                                                    <span className="font-[400] text-gray-100">{lang.name}</span> <span className="ml-2 text-gray-300">{lang.percentage}%</span>
                                             </p>
                                         ))
                                     }
                                 </div>
                             </>
+                            :
+                            <p className="text-gray-400">Loading language stats...</p>
                         }
                     </section>
                 </>

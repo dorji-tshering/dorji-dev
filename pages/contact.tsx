@@ -1,12 +1,9 @@
-import { DM_Sans } from "@next/font/google";
 import { FormEvent, useState } from "react";
 import { useNoticeContext } from "../components/utils/NoticeContext";
 import sendEmail from "../components/utils/SendEmail";
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-
-const DMSans = DM_Sans({
-    weight: '400'
-});
+import { IoMdArrowBack } from "react-icons/io";
+import { useRouter } from 'next/router';
 
 const contact = () => {
     const [name, setName] = useState<string>('');
@@ -16,6 +13,7 @@ const contact = () => {
     const [isLoading, setLoading] = useState<boolean>(false);
     
     const { showNotice, setNoticeMessage, isSuccess, isError } = useNoticeContext();
+    const router = useRouter();
 
     const send = (event: FormEvent) => {
         event.preventDefault();
@@ -32,10 +30,17 @@ const contact = () => {
             setLoading(false);
         });
     }
-
+ 
     return (
-        <div className="pageContainer bg-bgContact">
-            <h3 className="mb-12 text-2xl">Contact Me</h3>
+        <div className="pageContainer">
+            <div className="relative">
+                <h3 className="mb-12 text-2xl font-[600]">Contact Me</h3>
+                <button 
+                    className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
+                        w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg
+                        hover:bg-gray-700 transition-all duration-300"
+                    onClick={() => router.back()}><IoMdArrowBack /></button>
+            </div>
             <section className="flex flex-col lg:flex-row justify-between">
                 <div className="mb-6 md:w-[100%] lg:w-[37%]">
                     <p>I am interested in frontend and wordpress projects. If you you want to 
@@ -49,7 +54,7 @@ const contact = () => {
                 <form className="w-full lg:w-[59%]" onSubmit={send}>
                     <div className="sm:flex sm:justify-between">
                         <input 
-                            className={`${DMSans.className} formInput form-input !rounded w-full sm:w-[49%] lg:mt-0`} 
+                            className={`formInput form-input !rounded w-full sm:w-[49%] lg:mt-0`} 
                             type="text" 
                             name="name" 
                             id="name" 
@@ -58,7 +63,7 @@ const contact = () => {
                             required
                         />
                         <input 
-                            className={`${DMSans.className} formInput form-input !rounded w-full sm:w-[49%] lg:mt-0`}
+                            className={`formInput form-input !rounded w-full sm:w-[49%] lg:mt-0`}
                             type="email" 
                             name="email" 
                             id="email" 
@@ -68,7 +73,7 @@ const contact = () => {
                         />
                     </div>
                     <input 
-                        className={`${DMSans.className} formInput form-input !rounded w-full`}
+                        className={`formInput form-input !rounded w-full`}
                         type="text" 
                         name="subject"
                         placeholder="Subject"
@@ -76,7 +81,7 @@ const contact = () => {
                         required
                     />
                     <textarea 
-                        className={`${DMSans.className} formInput form-textarea !rounded w-full resize-y`} 
+                        className={`formInput form-textarea !rounded w-full resize-y`} 
                         name="message" 
                         id="message" 
                         rows={6} 
@@ -88,9 +93,9 @@ const contact = () => {
                         data-mdb-ripple-color="light"
                         disabled={isLoading ? true : false}
                         className={`!bg-theme flex items-center border-0 ml-auto ripple relative overflow-hidden rounded
-                        text-white px-5 py-2 text-xs tracking-wider hover:!bg-theme/80
-                        transition-all duration-300 ${isLoading ? 'cursor-not-allowed' : ''}`} type="submit">
-                            SEND MESSAGE 
+                        text-white px-5 py-3 text-xs tracking-wider hover:!bg-theme/80 mt-2
+                        transition-all duration-300 font-[500] ${isLoading ? 'cursor-not-allowed' : ''}`} type="submit">
+                            Send Message 
                             {
                                 isLoading && <AiOutlineLoading3Quarters
                                 className="animate-spin ml-2" 

@@ -1,29 +1,25 @@
-import { Crimson_Text } from '@next/font/google';
 import Link from 'next/link';
 import { GoPrimitiveDot } from 'react-icons/go';
 import Projects from '../utils/Project';
-
-const Crimson = Crimson_Text({ 
-    weight: '400',
-});
 
 const Work = () => {
     const featuredProject = Projects().filter((project) => project.featured === true )[0];
     const prioritizedProjects = Projects().filter((project) => project.prioritize === true);
 
     return (
-        <div className="homeSectionContainer bg-bgProject">
-            <h3 className="text-center text-gray-300 mb-10">MY WORK</h3>
+        <div className="homeSectionContainer">
+            <h3 className="text-center text-xl mb-10 font-[600]">MY WORK</h3>
             <p className="text-center mb-10">A list of my projects that I have done over the years.</p>
             {/* Featured Project */}
             <section>
                 <h4 
-                    className={`${Crimson.className} text-center text-xs text-cyan-400 tracking-widest mb-10`}>
+                    className={` text-center text-xs text-cyan-400 tracking-widest mb-10`}>
                     FEATURED PROJECT
                 </h4>
-                <div className="relative rounded group bg-lightBg max-w-[450px] mx-auto py-8 px-9 overflow-hidden">
+                <div className="relative rounded group bg-lightBg max-w-[450px] transition-all
+                    mx-auto py-8 px-9 overflow-hidden shadow-sm shadow-black hover:shadow-md hover:shadow-black">
                     <div className="flex justify-between mb-5">
-                        <h4 className="my-0">{ featuredProject.title }</h4>
+                        <h4 className="my-0 font-[500]">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
                         </Link>
                     </div>
@@ -45,9 +41,10 @@ const Work = () => {
             <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4">
                 {
                     prioritizedProjects.map((project) => (
-                        <div className="bg-lightBg rounded p-6 my-3 lg:mx-2 group overflow-hidden relative" key={project.id}>
+                        <div className="bg-lightBg shadow-sm shadow-black rounded p-6 my-3 lg:mx-2 transition-all  
+                            group overflow-hidden relative hover:shadow-md hover:shadow-black" key={project.id}>
                             <div className="flex justify-between mb-5">
-                                <h4 className="my-0">{ project.title }</h4>
+                                <h4 className="my-0 font-[500]">{ project.title }</h4>
                                 <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${project.id}`}>View
                                 </Link>
                             </div>
@@ -63,7 +60,7 @@ const Work = () => {
                     ))
                 }
             </section>
-            <Link className="text-theme block mx-auto w-fit mt-10 mb-4 
+            <Link className="text-theme block mx-auto w-fit mt-10 
               hover:text-orange-700 transition-all duration-300 ease-out" href="/projects">View all projects
             </Link>
         </div>
