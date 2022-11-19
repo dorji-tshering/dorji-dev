@@ -2,7 +2,7 @@ const TechStack = () => {
     
     return (
         <div className="homeSectionContainer">
-            <h3 className="text-center text-xl mb-10 font-[600]">MY TECH STACKS</h3>
+            <h3 className="text-center text-xl mb-10 font-[600] text-white">MY TECH STACKS</h3>
             <p className="mb-10 text-center text-gray-100">Languages, frameworks, libraries, and technologies  I have experience with.</p>
             <div className="flex flex-wrap justify-center mx-auto max-w-[500px]">
                 <div className="techStack">HTML</div>

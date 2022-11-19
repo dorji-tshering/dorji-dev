@@ -11,14 +11,14 @@ const ProjectHome = () => {
     return (
         <div className="pageContainer">
             <div className="relative">
-                <h1 className="text-2xl mb-8 lg:mb-12 font-[600] pr-11">{projects.length} Projects</h1>
+                <h1 className="text-2xl mb-8 lg:mb-12 font-[600] pr-11 text-white">My Projects</h1>
                 <button 
                     className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
                         w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg
                         hover:bg-gray-700 transition-all duration-300"
                     onClick={() => router.back()}><IoMdArrowBack /></button>
             </div>
-            <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+            <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:-mx-2">
                 {
                     projects.map((project) => (
                         <div className="bg-lightBg shadow-sm shadow-black rounded p-6 my-3 lg:mx-2 

@@ -10,7 +10,7 @@ const skills = () => {
     return (
         <div className="pageContainer">
             <div className="relative">
-                <h1 className="mb-12 text-2xl font-[600] pr-11">Skills and Experience</h1>
+                <h1 className="mb-12 text-2xl font-[600] pr-11 text-white">Skills and Experience</h1>
                 <button 
                     className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
                         w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg
@@ -19,7 +19,7 @@ const skills = () => {
             </div>
             <div className="lg:flex">
                 <section className="mb-16 lg:mb-0  lg:flex-1 lg:mr-20">
-                    <p className="bg-lightBg p-6 sm:p-10 rounded">
+                    <p className="bg-lightBg p-6 sm:p-10 lg:p-6 xl:p-10 rounded">
                         It’s been more than two years  since I started learning web development. 
                         Within that duration, I have equipped myself with skills and technologies. 
                         I have done multiple projects both personal and as a part of a job interview. 
