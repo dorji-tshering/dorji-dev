@@ -16,12 +16,12 @@ const MobileMenu = ({ showMenu, setShowMenu }: Props) => {
     }, [])
  
     return (
-        <div className={`fixed z-[100] transform h-screen w-screen md:hidden
+        <div className={`fixed z-[100] transform h-full w-screen md:hidden
             ${!showMenu && '-translate-x-full'} ${showMenu && 'bg-black/60'} 
             transition-all duration-300 ease-in`} 
             onClick={() => setShowMenu(false)}>
 
-            <div className={`absolute left-0 top-0 h-full overflow-y-auto flex flex-col w-48`}
+            <div className={`absolute bg-lightBg left-0 top-0 h-full pb-10 overflow-y-auto flex flex-col w-48`}
                 onClick={(ev) => ev.stopPropagation()}>
 
                 {/* logo */}
@@ -33,7 +33,7 @@ const MobileMenu = ({ showMenu, setShowMenu }: Props) => {
                     <DiCode className="mx-auto" size={28} color="#989797"/>
                 </div>
                 {/* menu */}
-                <div className="bg-lightBg flex-1">
+                <div className="flex-1">
                     <div className="flex flex-col text-center my-16">
                         <Link onClick={() => setShowMenu(false)} className="menuLink ripple !border-t !border-t-lightBorder" href="/">Home</Link>
                         <Link onClick={() => setShowMenu(false)} className="menuLink ripple" href="/about">About</Link>
