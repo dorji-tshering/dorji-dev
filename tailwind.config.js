@@ -15,7 +15,7 @@ module.exports = {
                 'lightBorder': '#413F3F',
             },
             boxShadow: {
-                'nailShadow': "0px 0px 22px 9px #ff4d06"
+                'nailShadow': "0px 0px 22px 9px #ff4d06",
             },
             keyframes: {
                 rippleKeyframe: {
