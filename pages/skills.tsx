@@ -19,7 +19,7 @@ const skills = () => {
             </div>
             <div className="lg:flex">
                 <section className="mb-16 lg:mb-0  lg:flex-1 lg:mr-20">
-                    <p className="bg-lightBg p-8 rounded">
+                    <p className="bg-lightBg p-6 sm:p-10 rounded">
                         It’s been more than two years  since I started learning web development. 
                         Within that duration, I have equipped myself with skills and technologies. 
                         I have done multiple projects both personal and as a part of a job interview. 

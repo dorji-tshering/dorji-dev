@@ -12,7 +12,7 @@ const About = () => {
                 width={200}
                 height={200}
             />
-            <p className="rounded pt-[110px] px-6 pb-7 sm:px-9 sm:pb-9 shadow-sm shadow-gray-500
+            <p className="rounded pt-[110px] px-6 pb-7 sm:px-10 sm:pb-9 shadow-sm shadow-gray-500
                 relative -top-20 max-w-2xl bg-darkBg text-center">
                 I am a college dropout and hence a self-taught developer. I started learning
                 web development at the start of 2020. Prior to that, I have had a little bit of experience

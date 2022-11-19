@@ -17,7 +17,7 @@ const about = () => {
                     onClick={() => router.back()}><IoMdArrowBack /></button>
             </div>
             <div className="flex flex-col-reverse lg:flex-row">
-                <section className="relative rounded p-10 flex justify-center items-center bg-lightBg lg:w-[70%] lg:mr-12 overflow-hidden">
+                <section className="relative rounded p-6 sm:p-10 flex justify-center items-center bg-lightBg lg:w-[70%] lg:mr-12 overflow-hidden">
                     <div>
                         <p className="mb-6">
                             As for the programming languages, I have made myself familiar with C, Java, Python, Javascript, and Typescript. 
