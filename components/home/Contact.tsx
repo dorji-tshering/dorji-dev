@@ -81,7 +81,7 @@ const Contact = () => {
                         data-mdb-ripple-color="light"
                         disabled={isLoading ? true : false}
                         className={`flex items-center ml-auto ripple relative overflow-hidden rounded
-                        text-theme px-5 py-3 text-sm tracking-wider mt-2 border border-theme
+                        text-theme px-4 py-2 text-sm tracking-wider mt-2 border border-theme
                         hover:!bg-theme hover:text-white
                         transition-all duration-300 font-[400] ${isLoading ? 'cursor-not-allowed' : ''}`} type="submit">
                             Send Message
