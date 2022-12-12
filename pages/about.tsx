@@ -1,13 +1,18 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { IoMdArrowBack } from 'react-icons/io';
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { IoMdArrowBack } from 'react-icons/io'
+import Head from 'next/head'
 
 const about = () => {
     const router = useRouter();
 
     return (
         <div className="pageContainer">
+            <Head>
+                <title>Dorji &bull; About</title>
+                <meta name='description' content='I am a self-taught Frontend/Wordpress developer. My tech stacks include mostly of React and Next.'/>
+            </Head>
             <div className="relative">
                 <h1 className="mb-12 text-2xl font-[600] pr-11 text-white">A little extra about myself</h1>
                 <button 

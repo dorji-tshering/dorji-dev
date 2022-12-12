@@ -1,9 +1,10 @@
-import { FormEvent, useState } from "react";
-import { useNoticeContext } from "../components/utils/NoticeContext";
-import sendEmail from "../components/utils/SendEmail";
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import { IoMdArrowBack } from "react-icons/io";
-import { useRouter } from 'next/router';
+import { FormEvent, useState } from "react"
+import { useNoticeContext } from "../components/utils/NoticeContext"
+import sendEmail from "../components/utils/SendEmail"
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import { IoMdArrowBack } from "react-icons/io"
+import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 const contact = () => {
     const [name, setName] = useState<string>('');
@@ -33,6 +34,10 @@ const contact = () => {
  
     return (
         <div className="pageContainer">
+            <Head>
+                <title>Dorji &bull; Contact</title>
+                <meta name='description' content='If you want to discuss any frontend or wordpress projects, you can contact me at the click of a button.' />
+            </Head>
             <div className="relative">
                 <h3 className="mb-12 text-2xl font-[600] text-white">Contact Me</h3>
                 <button 

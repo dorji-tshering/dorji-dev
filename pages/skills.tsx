@@ -1,14 +1,19 @@
 import { IoMdArrowBack } from "react-icons/io";
 import TechProgress from "../components/utils/TechProgress";
 import { useRouter } from 'next/router';
+import Head from "next/head";
 
 const progress = TechProgress();
 
-const skills = () => {
+const Skills = () => {
     const router = useRouter();
 
     return (
         <div className="pageContainer">
+            <Head>
+                <title>Dorji &bull; Skills</title>
+                <meta name="description" content='View my tech skills and experience I have with using it via the proficiency bar.'/>
+            </Head>
             <div className="relative">
                 <h1 className="mb-12 text-2xl font-[600] pr-11 text-white">Skills and Experience</h1>
                 <button 
@@ -47,4 +52,4 @@ const skills = () => {
     )
 }
 
-export default skills
+export default Skills

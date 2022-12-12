@@ -14,7 +14,7 @@ const DesktopSidebar = () => {
     return (
         <div className="hidden overflow-y-auto md:flex md:flex-col md:w-48 lg:w-56">
             {/* logo */}
-            <div className="bg-darkBg px-7 py-7 text-center">
+            <div className="bg-darkBg/70 px-7 py-7 text-center">
                 <Link className="text-[18px] mt-1 font-[600]" href='/'>
                     <span className="text-theme">Dorji</span> <span>Tshering</span>
                 </Link>
@@ -22,13 +22,13 @@ const DesktopSidebar = () => {
                 <DiCode className="mx-auto" size={28} color="#989797"/>
             </div>
             {/* menu */}
-            <div className="bg-lightBg flex-1">
+            <div className="bg-lightBg/70 flex-1">
                 <div className="flex flex-col text-center my-20">
-                    <Link className="menuLink ripple !border-t !border-t-lightBorder" href="/">Home</Link>
-                    <Link className="menuLink ripple" href="/about">About</Link>
-                    <Link className="menuLink ripple" href="/projects">Projects</Link>
-                    <Link className="menuLink ripple" href="/skills">Skills</Link>
-                    <Link className="menuLink ripple" href="/contact">Contact</Link>
+                    <Link className="menuLink ripple !border-t !border-t-lightBorder" scroll={false} href="/">Home</Link>
+                    <Link className="menuLink ripple" scroll={false} href="/about">About</Link>
+                    <Link className="menuLink ripple" scroll={false} href="/projects">Projects</Link>
+                    <Link className="menuLink ripple" scroll={false} href="/skills">Skills</Link>
+                    <Link className="menuLink ripple" scroll={false} href="/contact">Contact</Link>
                 </div>
                 {/* social */}
                 <div className="flex justify-center">

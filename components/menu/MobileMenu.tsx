@@ -21,11 +21,11 @@ const MobileMenu = ({ showMenu, setShowMenu }: Props) => {
             transition-all duration-300 ease-in`} 
             onClick={() => setShowMenu(false)}>
 
-            <div className={`absolute bg-lightBg left-0 top-0 h-full pb-10 overflow-y-auto flex flex-col w-48`}
+            <div className={`absolute bg-lightBg/80 left-0 top-0 h-full pb-10 overflow-y-auto flex flex-col w-48`}
                 onClick={(ev) => ev.stopPropagation()}>
 
                 {/* logo */}
-                <div className="bg-darkBg px-7 py-7 text-center">
+                <div className="bg-darkBg/60 px-7 py-7 text-center">
                     <Link onClick={() => setShowMenu(false)} className="text-[18px] mt-1 font-[600]" href='/'>
                         <span className="text-theme">Dorji</span> <span>Tshering</span>
                     </Link>

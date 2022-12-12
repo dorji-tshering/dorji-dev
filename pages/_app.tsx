@@ -10,7 +10,6 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <main>
             <Head>
-                <title>Dorji Tshering</title> 
                 <link rel="icon" href="/images/logo.png" />
             </Head>
             <Layout>

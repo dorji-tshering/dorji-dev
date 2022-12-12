@@ -29,7 +29,7 @@ const Contact = () => {
     }
     
     return (
-        <div className="homeSectionContainer !border-b-0">
+        <div className="homeSectionContainer">
             <h3 className="text-center text-xl mb-10 font-[600] text-white">CONTACT ME</h3>
             <section className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between">
                 <div className="sm:w-[40%] md:w-[100%] lg:w-[40%] px-6">
