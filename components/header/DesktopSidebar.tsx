@@ -12,7 +12,7 @@ const DesktopSidebar = () => {
     }, []); 
 
     return (
-        <div className="hidden overflow-y-auto md:flex md:flex-col md:w-48 lg:w-56">
+        <div className="hidden overflow-y-auto md:flex md:flex-col md:w-48 lg:w-56 border-r border-r-gray-600">
             {/* logo */}
             <div className="bg-darkBg/70 px-7 py-7 text-center">
                 <Link className="text-[18px] mt-1 font-[600]" href='/'>

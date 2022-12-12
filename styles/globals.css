@@ -19,14 +19,15 @@
 }
 
 .techStack {
-    @apply mx-3 mb-8 py-[6px] px-4 bg-gray-700/40 text-sm
+    @apply mx-3 mb-8 py-[6px] px-4 bg-gray-700/30 text-sm
     rounded-full text-center shadow-sm shadow-black border-t
     border-t-gray-700
 }
 
 .formInput {
-    @apply bg-lightBg border-gray-600/60 my-3 focus:ring-theme/20 
+    @apply bg-gray-700/10 my-3 focus:ring-theme/20 focus:bg-transparent
     focus:ring-[3px] focus:border-theme text-gray-100
+    border-gray-700
 }
 
 .pageContainer {
@@ -66,7 +67,7 @@ body {
     font-size: 16px;
     min-height: 100%;
     color: rgb(207, 206, 206);
-    background-image: radial-gradient(#794a04 0.7000000000000001px, #19191a 0.7000000000000001px);
+    background-image: radial-gradient(#794a04 0.7000000000000001px, #111 0.7000000000000001px);
     background-size: 14px 14px;
     word-spacing: 1px;
 }

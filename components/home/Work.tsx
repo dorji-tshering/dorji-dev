@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { GoPrimitiveDot } from 'react-icons/go';
 import Projects from '../utils/Project';
+import { motion } from 'framer-motion'
 
 const Work = () => {
     const featuredProject = Projects().filter((project) => project.featured === true )[0];
@@ -16,8 +17,12 @@ const Work = () => {
                     className={` text-center text-xs text-cyan-400 tracking-widest mb-10`}>
                     FEATURED PROJECT
                 </h4>
-                <div className="relative rounded group bg-lightBg max-w-[450px] transition-all
-                    mx-auto py-8 px-9 overflow-hidden shadow-sm shadow-black hover:shadow-md hover:shadow-black">
+                <motion.div
+                    initial={{ opacity: 0}}
+                    whileInView={{ opacity: 1}}
+                    viewport={{ once: false }} 
+                    className="relative rounded group bg-lightBg max-w-[450px] transition-all
+                        mx-auto py-8 px-9 overflow-hidden shadow-sm shadow-black hover:shadow-md hover:shadow-black">
                     <div className="flex justify-between mb-5">
                         <h4 className="my-0 font-[500]">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
@@ -32,7 +37,7 @@ const Work = () => {
                     <GoPrimitiveDot className="absolute top-1 right-1 text-gray-600"/>
                     <GoPrimitiveDot className="absolute bottom-1 right-1 text-gray-600"/>
                     <GoPrimitiveDot className="absolute bottom-1 left-1 text-gray-600"/>
-                </div>
+                </motion.div>
             </section>
             <span className="block h-[1px] w-[80%] my-16 mb-14 mx-auto
                 bg-gradient-to-r from-black via-gray-400 to-black">
@@ -41,8 +46,13 @@ const Work = () => {
             <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4">
                 {
                     prioritizedProjects.map((project) => (
-                        <div className="bg-lightBg shadow-sm shadow-black rounded p-6 my-3 lg:mx-2 transition-all  
-                            group overflow-hidden relative hover:shadow-md hover:shadow-black" key={project.id}>
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: false}}
+                            className="bg-lightBg shadow-sm shadow-black rounded p-6 my-3 lg:mx-2 transition-all  
+                                group overflow-hidden relative hover:shadow-md hover:shadow-black" 
+                            key={project.id}>
                             <div className="flex justify-between mb-5">
                                 <h4 className="my-0 font-[500]">{ project.title }</h4>
                                 <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${project.id}`}>View
@@ -56,7 +66,7 @@ const Work = () => {
                                     href={project.github}
                                     target="_blank">Github</Link>
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
             </section>

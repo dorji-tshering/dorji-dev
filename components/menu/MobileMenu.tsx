@@ -4,6 +4,7 @@ import { DiCode } from "react-icons/di"
 import { GrTwitter } from "react-icons/gr"
 import { Dispatch, SetStateAction, useEffect } from "react"; 
 import rippleEffect from '../utils/RippleEffect';
+import { motion } from 'framer-motion'
 
 interface Props {
     showMenu: boolean 
@@ -11,17 +12,25 @@ interface Props {
 }
 
 const MobileMenu = ({ showMenu, setShowMenu }: Props) => {
+
     useEffect(() =>{
         rippleEffect();
     }, [])
+
+    const variants = {
+        open: { opacity: 1, x: 0 },
+        closed: { opacity: 0, x: "-100%" },
+    }
  
     return (
-        <div className={`fixed z-[100] transform h-full w-screen md:hidden
-            ${!showMenu && '-translate-x-full'} ${showMenu && 'bg-black/60'} 
-            transition-all duration-300 ease-in`} 
+        <motion.div 
+            animate={showMenu ? "open" : "closed"}
+            variants={variants}
+            className={`fixed z-[100] h-full w-screen md:hidden bg-black/60`} 
             onClick={() => setShowMenu(false)}>
 
-            <div className={`absolute bg-lightBg/80 left-0 top-0 h-full pb-10 overflow-y-auto flex flex-col w-48`}
+            <div className={`absolute bg-lightBg/90 left-0 top-0 h-full pb-10 overflow-y-auto flex flex-col w-48 
+                border-r border-r-gray-600`}
                 onClick={(ev) => ev.stopPropagation()}>
 
                 {/* logo */}
@@ -58,7 +67,7 @@ const MobileMenu = ({ showMenu, setShowMenu }: Props) => {
                     </Link>
                 </div>
             </div>
-       </div>
+        </motion.div>
     )
 }
 

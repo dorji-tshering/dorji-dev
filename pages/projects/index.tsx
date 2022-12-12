@@ -3,6 +3,7 @@ import { IoMdArrowBack } from "react-icons/io"
 import Projects from "../../components/utils/Project"
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 
 const projects = Projects();
 
@@ -27,8 +28,13 @@ const ProjectHome = () => {
                 <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:-mx-2">
                     {
                         projects.map((project) => (
-                            <div className="bg-lightBg shadow-sm shadow-black rounded p-6 my-3 lg:mx-2 
-                                group overflow-hidden relative hover:shadow-md hover:shadow-black transition-all" key={project.id}>
+                            <motion.div 
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }} 
+                                className="bg-lightBg shadow-sm shadow-black rounded p-6 my-3 lg:mx-2 
+                                group overflow-hidden relative hover:shadow-md hover:shadow-black transition-all" 
+                                key={project.id}>
                                 <div className="flex justify-between mb-5">
                                     <h4 className="my-0 font-[500]">{ project.title }</h4>
                                     <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${project.id}`}>View
@@ -43,7 +49,7 @@ const ProjectHome = () => {
                                         target="_blank">Github
                                     </Link>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))
                     }
                 </section>
