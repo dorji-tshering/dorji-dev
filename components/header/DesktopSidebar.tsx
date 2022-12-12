@@ -24,11 +24,11 @@ const DesktopSidebar = () => {
             {/* menu */}
             <div className="bg-lightBg/70 flex-1">
                 <div className="flex flex-col text-center my-20">
-                    <Link className="menuLink ripple !border-t !border-t-lightBorder" scroll={false} href="/">Home</Link>
-                    <Link className="menuLink ripple" scroll={false} href="/about">About</Link>
-                    <Link className="menuLink ripple" scroll={false} href="/projects">Projects</Link>
-                    <Link className="menuLink ripple" scroll={false} href="/skills">Skills</Link>
-                    <Link className="menuLink ripple" scroll={false} href="/contact">Contact</Link>
+                    <Link className="menuLink ripple !border-t !border-t-lightBorder" href="/">Home</Link>
+                    <Link className="menuLink ripple" href="/about">About</Link>
+                    <Link className="menuLink ripple" href="/projects">Projects</Link>
+                    <Link className="menuLink ripple" href="/skills">Skills</Link>
+                    <Link className="menuLink ripple" href="/contact">Contact</Link>
                 </div>
                 {/* social */}
                 <div className="flex justify-center">

@@ -7,6 +7,7 @@ import Head from 'next/head'
 
 
 export default function Home() {
+    
 
     return (
         <div className="flex flex-col">
@@ -14,6 +15,7 @@ export default function Home() {
                 <title>Dorji &bull; Developer</title> 
                 <meta key='index' name='description' content='I am a Frontend/Wordpress developer who enjoys building the face of web applications.' />
             </Head>
+            
             {/* landing */}
             <Landing/>
             {/* work */}
@@ -24,6 +26,7 @@ export default function Home() {
             <TechStack/>
             {/* contact */}
             <Contact/>
+            
         </div>
     )
 }

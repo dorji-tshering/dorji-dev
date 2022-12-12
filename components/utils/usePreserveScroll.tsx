@@ -1,31 +1,34 @@
-import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
+import { useRouter } from "next/router"
+import { useEffect, useRef } from "react"
 
-export const usePreserveScroll = () => {
+/**
+ * Hook to preserve scroll positions on client side navigations.
+ * @param ref Scrollable HTMLElement of which scroll you want to maintain on client navigations.
+ */
+export const usePreserveScroll = (ref?: HTMLElement) => {
     const router = useRouter()
     const scrollPositions = useRef<{ [url: string]: number }>({})
-    const isBack = useRef(false)
 
     useEffect(() => {
-        router.beforePopState(() => {
-            isBack.current = true
-            return true
-        })
-
         const onRouteChangeStart = () => {
-            const url = router.pathname // current URL
-            scrollPositions.current[url] = window.scrollY
+            const url = router.asPath // current URL
+            scrollPositions.current[url] = ref && ref.scrollTop || window.scrollY
         }
 
         const onRouteChangeComplete = (url: string) => {
-            if (isBack.current && scrollPositions.current[url]) {
-                window.scroll({
-                    top: scrollPositions.current[url],
-                    behavior: "auto",
-                })
+            if (scrollPositions.current[url]) {
+                if(ref) {
+                    ref.scroll({
+                        top: scrollPositions.current[url],
+                        behavior: "auto",
+                    })
+                }else {
+                    window.scroll({
+                        top: scrollPositions.current[url],
+                        behavior: "auto",
+                    })
+                }
             }
-
-            isBack.current = false
         }
 
         router.events.on("routeChangeStart", onRouteChangeStart)
@@ -35,5 +38,7 @@ export const usePreserveScroll = () => {
             router.events.off("routeChangeStart", onRouteChangeStart)
             router.events.off("routeChangeComplete", onRouteChangeComplete)
         }
-    }, [router])
+        // 'ref' dependency to update the events when scrollable element becomes available
+        // on devices 'width >= 768px '
+    }, [router, ref]) 
 }
