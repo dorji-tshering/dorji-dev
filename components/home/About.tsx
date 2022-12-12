@@ -12,14 +12,14 @@ const About = () => {
                 width={200}
                 height={200}
             />
-            <p className="rounded pt-[110px] px-6 pb-7 sm:px-10 sm:pb-9 shadow-sm shadow-gray-500
-                relative -top-20 max-w-2xl bg-darkBg text-center">
+            <p className="rounded pt-[110px] px-6 pb-7 sm:px-10 sm:pb-9 shadow-sm shadow-black
+                relative -top-20 max-w-2xl bg-lightBg text-center">
                 I am a college dropout and hence a self-taught developer. I started learning
                 web development at the start of 2020. Prior to that, I have had a little bit of experience
                 coding in C language as taught in the college. Within the span of almost two years, 
                 I have made myself familiar with Frontend, Backend, Mobile Application, and Wordpress development
                 via personal projects mostly and a few client projects. However, as time went by, I have 
-                committed myself fully to the Frontend aspect of the web development which I truly enjoy. 
+                committed myself fully to the Frontend aspect of web development which I truly enjoy. 
             </p>
         </div>
     </div>

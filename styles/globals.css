@@ -18,13 +18,10 @@
     md:first:mt-5 md:mx-5 border-gray-600 rounded-md
 }
 
-.homeConnector {
-    @apply m-8
-}
-
 .techStack {
-    @apply mx-3 mb-8 py-[6px] px-3 bg-gray-700/80 text-sm
-    rounded-sm text-center shadow-sm shadow-black
+    @apply mx-3 mb-8 py-[6px] px-4 bg-gray-700/40 text-sm
+    rounded-full text-center shadow-sm shadow-black border-t
+    border-t-gray-700
 }
 
 .formInput {
