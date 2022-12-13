@@ -35,8 +35,7 @@ const Work = () => {
 
     return (
         <div className="homeSectionContainer">
-            <h3 className="text-center text-xl mb-10 font-[600] text-white">MY WORK</h3>
-            <p className="text-center mb-10">A list of my projects that I have done over the years.</p>
+            <h1 className="text-center text-myYellow text-xl font-bold mb-10">A list of my projects that I have done over the years.</h1>
             {/* Featured Project */}
             <section>
                 <h4 

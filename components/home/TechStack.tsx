@@ -3,8 +3,7 @@ import { motion } from 'framer-motion'
 const TechStack = () => {
     return (
         <div className="homeSectionContainer">
-            <h3 className="text-center text-xl mb-10 font-[600] text-white">MY TECH STACKS</h3>
-            <p className="mb-10 text-center text-gray-100">Languages, frameworks, libraries, and technologies  I have experience with.</p>
+            <h1 className="mb-10 text-center font-bold text-xl text-myPurple">Languages, frameworks, libraries, and technologies  I have experience with.</h1>
             <motion.div 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1, transition: {staggerChildren: 2} }}

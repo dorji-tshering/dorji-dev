@@ -30,7 +30,7 @@ const Contact = () => {
     
     return (
         <div className="homeSectionContainer">
-            <h3 className="text-center text-xl mb-10 font-[600] text-white">CONTACT ME</h3>
+            <h1 className="text-xl text-myGreen font-bold text-center mb-10">I love being reached out!</h1>
             <section className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between">
                 <div className="sm:w-[40%] md:w-[100%] lg:w-[40%] px-6">
                     <p className="text-center sm:text-left md:text-center lg:text-left">I am interested in frontend and wordpress projects. If you you want to 

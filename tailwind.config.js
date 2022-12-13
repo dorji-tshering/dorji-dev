@@ -10,6 +10,10 @@ module.exports = {
             colors: {
                 'theme': '#3889f4',
                 'mainBg': '#111',
+                'myRed': '#f56c62',
+                'myYellow': '#fbc765',
+                'myPurple': '#c766f4',
+                'myGreen': '#62f4ab'
             },
             boxShadow: {
                 nailShadow: "0px 0px 22px 9px #016DF9",

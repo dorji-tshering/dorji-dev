@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import classNames from 'classnames'
 
 const wrapper = {
     initial: {
@@ -17,22 +18,18 @@ const wrapper = {
 const itemVertical = {
     initial: {
         height: 0,
-        opacity: 0
     },
     whileInView: {
-        height: 70,
-        opacity: 1,
+        height: 132,
     }
 }
 
 const itemHorizontal = {
     initial: {
         width: 0,
-        opacity: 0
     },
     whileInView: {
          width: "100%",
-         opacity: 1, 
          transition: {
             delay: .2,
             duration: 1
@@ -40,7 +37,7 @@ const itemHorizontal = {
     }
 }
 
-const iconVariant = {
+const headerVariant = {
     initial: {
         opacity: 0
     },
@@ -57,11 +54,11 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
             initial='initial'
             whileInView='whileInView'
             variants={wrapper}
-            viewport={{once: false, margin: "-200px"}}
-            className='h-[200px] flex flex-col items-center justify-start'>
+            viewport={{once: false, margin: "0px 0px -150px 0px"}}
+            className='h-[300px] flex flex-col items-center justify-start'>
             <motion.span 
                 variants={itemVertical}
-                className='w-[3px] bg-gradient-to-b from-transparent to-theme rounded-br-sm rounded-bl-sm'
+                className='w-[3px] bg-gradient-to-b from-transparent to-theme rounded'
             />
             <div 
                 className='w-full flex justify-center items-center'>
@@ -70,8 +67,14 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
                     className='h-[3px] bg-gradient-to-r from-transparent to-theme rounded-tr-sm rounded-br-sm block'
                 />
                 <motion.span
-                    variants={iconVariant}
-                    className='block w-fit text-theme whitespace-nowrap font-bold mx-2'>
+                    variants={headerVariant}
+                    className={classNames(
+                        'block w-fit whitespace-nowrap font-bold mx-2',
+                        header === 'work' && 'text-[#fbc765]',
+                        header === 'about' && 'text-[#f56c62]',
+                        header === 'stack' && 'text-[#c766f4]',
+                        header === 'contact' && 'text-[#62f4ab]'
+                    )}>
                     {
                         header === 'work' && 'MY WORK' ||
                         header === 'about' && 'ABOUT ME' ||
@@ -87,8 +90,7 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
 
             <motion.span
                 variants={itemVertical}
-                className='w-[3px] bg-gradient-to-t from-transparent to-theme rounded-br-sm rounded-bl-sm
-                    rounded-tl-sm rounded-tr-sm'
+                className='w-[3px] bg-gradient-to-t from-transparent to-theme rounded'
             />
         </motion.div>
     )

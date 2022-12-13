@@ -3,7 +3,7 @@ import Image from 'next/image';
 const About = () => {
   return (
     <div className="homeSectionContainer">
-        <h3 className="text-center mb-10 text-xl font-[600]">ABOUT ME</h3>
+        <h1 className="text-myRed text-xl text-center font-bold mb-10">Something about me</h1>
         <div className="flex flex-col items-center relative -bottom-2 -mb-12">
             <Image 
                 className="object-cover z-10 rounded-full p-[1px] border border-solid border-gray-600" 
