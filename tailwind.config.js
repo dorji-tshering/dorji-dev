@@ -12,7 +12,7 @@ module.exports = {
                 'mainBg': '#111',
             },
             boxShadow: {
-                'nailShadow': "0px 0px 22px 9px #016DF9",
+                nailShadow: "0px 0px 22px 9px #016DF9",
             },
             keyframes: {
                 rippleKeyframe: {

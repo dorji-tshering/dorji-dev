@@ -18,16 +18,16 @@ export default function Home() {
             
             {/* landing */}
             <Landing/>
-            <HomeSectionSeparator icon='work'/>
+            <HomeSectionSeparator header='work'/>
             {/* work */}
             <Work/>
-            <HomeSectionSeparator icon='about'/>
+            <HomeSectionSeparator header='about'/>
             {/* about */}
             <About/>
-            <HomeSectionSeparator icon='stack'/>
+            <HomeSectionSeparator header='stack'/>
             {/* stack */}
             <TechStack/>
-            <HomeSectionSeparator icon='contact'/>
+            <HomeSectionSeparator header='contact'/>
             {/* contact */}
             <Contact/>
             

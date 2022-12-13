@@ -1,18 +1,15 @@
-import { motion, useInView } from "framer-motion"
-import { MdOutlineWorkOutline } from 'react-icons/md'
-import { IoPersonOutline, IoCallOutline } from 'react-icons/io5'
-import { ImStack } from 'react-icons/im'
+import { motion } from "framer-motion"
 
 const wrapper = {
     initial: {
         transition: {
             ease: 'ease-out',
-            staggerChildren: .1,
+            staggerChildren: .2,
         }
     },
     whileInView: {
         transition: {
-            staggerChildren: .1,
+            staggerChildren: .2,
         }
     }
 }
@@ -23,8 +20,8 @@ const itemVertical = {
         opacity: 0
     },
     whileInView: {
-        height: 100,
-        opacity: 1
+        height: 70,
+        opacity: 1,
     }
 }
 
@@ -34,10 +31,11 @@ const itemHorizontal = {
         opacity: 0
     },
     whileInView: {
-         width: "49%",
+         width: "100%",
          opacity: 1, 
          transition: {
-            delay: .2
+            delay: .2,
+            duration: 1
          }
     }
 }
@@ -52,44 +50,45 @@ const iconVariant = {
 }
 
 
-const HomeSectionSeparator = ({icon}: {icon: string}) => {
+const HomeSectionSeparator = ({header}: {header: string}) => {
 
     return (
         <motion.div 
             initial='initial'
             whileInView='whileInView'
             variants={wrapper}
-            viewport={{once: false, margin: "-250px"}}
-            className='h-[200px] flex flex-col items-center justify-center'>
+            viewport={{once: false, margin: "-200px"}}
+            className='h-[200px] flex flex-col items-center justify-start'>
             <motion.span 
                 variants={itemVertical}
-                className='w-1 bg-red-500'
+                className='w-[3px] bg-gradient-to-b from-transparent to-theme rounded-br-sm rounded-bl-sm'
             />
             <div 
                 className='w-full flex justify-center items-center'>
                 <motion.span
                     variants={itemHorizontal}
-                    className='h-1 bg-yellow-500 block'
+                    className='h-[3px] bg-gradient-to-r from-transparent to-theme rounded-tr-sm rounded-br-sm block'
                 />
                 <motion.span
                     variants={iconVariant}
-                    className='block w-fit'>
+                    className='block w-fit text-theme whitespace-nowrap font-bold mx-2'>
                     {
-                        icon === 'work' && <MdOutlineWorkOutline/> ||
-                        icon === 'about' && <IoPersonOutline/> ||
-                        icon === 'stack' && <ImStack/> ||
-                        icon === 'contact' && <IoCallOutline/> 
+                        header === 'work' && 'MY WORK' ||
+                        header === 'about' && 'ABOUT ME' ||
+                        header === 'stack' && 'MY TECH STACKS' ||
+                        header === 'contact' && 'CONTACT ME' 
                     }
                 </motion.span>
                 <motion.span
                     variants={itemHorizontal}
-                    className='h-1 bg-green-500 block'
+                    className='h-[3px] bg-gradient-to-r from-theme to-transparent rounded-tl-sm rounded-bl-sm block'
                 />
             </div>
 
             <motion.span
                 variants={itemVertical}
-                className='w-1 bg-theme'
+                className='w-[3px] bg-gradient-to-t from-transparent to-theme rounded-br-sm rounded-bl-sm
+                    rounded-tl-sm rounded-tr-sm'
             />
         </motion.div>
     )
