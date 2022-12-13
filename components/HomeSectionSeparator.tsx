@@ -54,7 +54,7 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
             initial='initial'
             whileInView='whileInView'
             variants={wrapper}
-            viewport={{once: false, margin: "0px 0px -150px 0px"}}
+            viewport={{once: false, margin: "0px 0px -250px 0px"}}
             className='h-[300px] flex flex-col items-center justify-start'>
             <motion.span 
                 variants={itemVertical}
