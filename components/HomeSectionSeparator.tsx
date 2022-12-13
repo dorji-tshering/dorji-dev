@@ -1,43 +1,58 @@
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { MdOutlineWorkOutline } from 'react-icons/md'
 import { IoPersonOutline, IoCallOutline } from 'react-icons/io5'
 import { ImStack } from 'react-icons/im'
 
+const wrapper = {
+    initial: {
+        transition: {
+            ease: 'ease-out',
+            staggerChildren: .1,
+        }
+    },
+    whileInView: {
+        transition: {
+            staggerChildren: .1,
+        }
+    }
+}
+
+const itemVertical = {
+    initial: {
+        height: 0,
+        opacity: 0
+    },
+    whileInView: {
+        height: 100,
+        opacity: 1
+    }
+}
+
+const itemHorizontal = {
+    initial: {
+        width: 0,
+        opacity: 0
+    },
+    whileInView: {
+         width: "49%",
+         opacity: 1, 
+         transition: {
+            delay: .2
+         }
+    }
+}
+
+const iconVariant = {
+    initial: {
+        opacity: 0
+    },
+    whileInView: {
+        opacity: 1
+    }
+}
+
 
 const HomeSectionSeparator = ({icon}: {icon: string}) => {
-
-    const wrapper = {
-        initial: {
-            transition: {
-                staggerChildren: .2,
-            }
-        },
-        whileInView: {
-            transition: {
-                staggerChildren: .2,
-            }
-        }
-    }
-
-    const itemVertical = {
-        initial: {
-            height: 0
-        },
-        whileInView: {
-            height: 100
-        }
-    }
-
-    const itemHorizontal = {
-        initial: {
-            width: 0,
-            flex: 0
-        },
-        whileInView: {
-            width: "100%",
-            flex: 1
-        }
-    }
 
     return (
         <motion.div 
@@ -45,18 +60,20 @@ const HomeSectionSeparator = ({icon}: {icon: string}) => {
             whileInView='whileInView'
             variants={wrapper}
             viewport={{once: false, margin: "-250px"}}
-            className='h-[200px] flex flex-col items-center'>
+            className='h-[200px] flex flex-col items-center justify-center'>
             <motion.span 
                 variants={itemVertical}
-                className='w-2 bg-red-500'
+                className='w-1 bg-red-500'
             />
-
-            <motion.div className='w-full flex justify-center'>
+            <div 
+                className='w-full flex justify-center items-center'>
                 <motion.span
                     variants={itemHorizontal}
                     className='h-1 bg-yellow-500 block'
                 />
-                <motion.span className='mx-auto block w-fit'>
+                <motion.span
+                    variants={iconVariant}
+                    className='block w-fit'>
                     {
                         icon === 'work' && <MdOutlineWorkOutline/> ||
                         icon === 'about' && <IoPersonOutline/> ||
@@ -68,11 +85,11 @@ const HomeSectionSeparator = ({icon}: {icon: string}) => {
                     variants={itemHorizontal}
                     className='h-1 bg-green-500 block'
                 />
-            </motion.div>
+            </div>
 
             <motion.span
                 variants={itemVertical}
-                className='w-2 bg-theme'
+                className='w-1 bg-theme'
             />
         </motion.div>
     )
