@@ -6,9 +6,10 @@ import Notice from '../Notice'
 import { NoticeProvider } from '../utils/NoticeContext'
 import { usePreserveScroll } from '../utils/usePreserveScroll'
 import isMobile from '../utils/isMobile'
+import { useCycle } from 'framer-motion'
 
 const Layout = ({ children }: { children: React.ReactElement }) => {
-    const [showMenu, setShowMenu] = useState<boolean>(false)
+    const [open, cycleOpen] = useCycle(false, true);
     const [notice, showNotice] = useState(false)
     const [noticeMessage, setNoticeMessage] = useState('')
     const [success, isSuccess] = useState(false)
@@ -37,11 +38,12 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
  
     return (
         <div className="flex flex-col md:flex-row md:h-screen">
-            <MobileHeader onMenuClick={() => setShowMenu(true)}/>
+            <MobileHeader onMenuClick={() => cycleOpen()}/>
             <DesktopSidebar/>
-            <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu}/>
-
-            <div className="overflow-y-auto relative flex-1" ref={ref}>
+            <MobileMenu open={open} cycleOpen={cycleOpen}/>
+            <div className="overflow-y-auto relative flex-1 bg-mainBg md:ml-6
+                md:shadow-md md:shadow-[#444]" 
+                ref={ref}>
                 <NoticeProvider value={contextValue}>
                     { 
                         notice && 

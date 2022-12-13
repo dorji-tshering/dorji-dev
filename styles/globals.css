@@ -2,10 +2,12 @@
 @import 'tailwindcss/utilities'; 
 @import 'tailwindcss/base';
 
-
 .menuLink {
-    @apply border-solid border-0 border-b
-     border-b-lightBorder py-4 relative overflow-hidden
+    @apply py-4 w-full block relative
+}
+
+.menuSeparator {
+    @apply h-[1px] bg-gradient-to-r from-[#111] via-theme/60 to-[#111] block
 }
 
 .socialLink {
@@ -14,14 +16,14 @@
 }
 
 .homeSectionContainer {
-    @apply px-4 py-20 sm:px-10 border mx-3 mb-5 first:mt-[80px] 
-    md:first:mt-5 md:mx-5 border-gray-600 rounded-md
+    @apply px-4 py-20 sm:px-10 mx-3 mb-5 first:mt-[80px] 
+    md:first:mt-5 md:mx-5
 }
 
 .techStack {
-    @apply mx-3 mb-8 py-[6px] px-4 bg-gray-700/30 text-sm
+    @apply mx-3 mb-8 py-[6px] px-4 bg-gray-700/30 text-sm text-slate-400
     rounded-full text-center shadow-sm shadow-black border-t
-    border-t-gray-700
+    border-t-gray-700 font-[500]
 }
 
 .formInput {
@@ -32,11 +34,11 @@
 
 .pageContainer {
     @apply mt-[62px] md:mt-0 py-12 md:py-16 px-4 sm:px-10 md:p-14 min-h-screen
-    md:flex md:flex-col md:justify-center bg-cover
+    md:flex md:flex-col md:justify-center
 }
 
 .rippleStyle {
-    @apply absolute rounded-full scale-0 animate-rippleAnimation bg-gray-500/50
+    @apply absolute rounded-full scale-0 animate-rippleAnimation bg-gray-700
 }
 
 /* change autofill background for chrome */
@@ -66,9 +68,8 @@ html {
 body {
     font-size: 16px;
     min-height: 100%;
-    color: rgb(207, 206, 206);
-    background-image: radial-gradient(#794a04 0.7000000000000001px, #111 0.7000000000000001px);
-    background-size: 14px 14px;
+    color: white;
+    background-color: #000;
     word-spacing: 1px;
 }
 

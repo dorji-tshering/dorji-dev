@@ -4,7 +4,7 @@ import Landing from "../components/home/Landing"
 import TechStack from "../components/home/TechStack"
 import Work from "../components/home/Work"
 import Head from 'next/head'
-
+import HomeSectionSeparator from '../components/HomeSectionSeparator'
 
 export default function Home() {
     
@@ -18,12 +18,16 @@ export default function Home() {
             
             {/* landing */}
             <Landing/>
+            <HomeSectionSeparator icon='work'/>
             {/* work */}
             <Work/>
+            <HomeSectionSeparator icon='about'/>
             {/* about */}
             <About/>
+            <HomeSectionSeparator icon='stack'/>
             {/* stack */}
             <TechStack/>
+            <HomeSectionSeparator icon='contact'/>
             {/* contact */}
             <Contact/>
             

@@ -42,10 +42,10 @@ const contact = () => {
                 <h3 className="mb-12 text-2xl font-[600] text-white">Contact Me</h3>
                 <button 
                     className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
-                        w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg
+                        w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full
                         hover:bg-gray-700 transition-all duration-300"
                     onClick={() => router.back()}><IoMdArrowBack /></button>
-            </div>
+            </div> 
             <section className="flex flex-col lg:flex-row justify-between">
                 <div className="mb-6 md:w-[100%] lg:w-[37%]">
                     <p>I am interested in frontend and wordpress projects. If you you want to 
@@ -94,13 +94,11 @@ const contact = () => {
                         onChange={(ev) => setMessage(ev.currentTarget.value)}
                         required></textarea>
                     <button 
-                        data-mdb-ripple="true"
-                        data-mdb-ripple-color="light"
                         disabled={isLoading ? true : false}
-                        className={`flex items-center ml-auto ripple relative overflow-hidden rounded
-                        text-theme px-4 py-2 text-sm tracking-wider mt-2 border border-theme
-                        hover:!bg-theme hover:text-white
-                        transition-all duration-300 font-[400] ${isLoading ? 'cursor-not-allowed' : ''}`} type="submit">
+                        className={`flex items-center mx-auto sm:ml-auto sm:mr-0 md:mx-auto lg:ml-auto lg:mr-0 ripple relative overflow-hidden rounded
+                        px-4 py-2 tracking-wider mt-2 !bg-theme text-white text-sm hover:ring-4 hover:ring-theme/40
+                        transition-all duration-300 font-[400] ${isLoading ? 'cursor-not-allowed' : ''}`} 
+                        type="submit">
                             Send Message 
                             {
                                 isLoading && <AiOutlineLoading3Quarters

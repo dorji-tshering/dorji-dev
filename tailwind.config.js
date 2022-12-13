@@ -8,14 +8,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'theme': '#FF4D06',
-                'darkBg': '#111',
-                'lightBg': '#29292C',
-                'lightGray': '#989797',
-                'lightBorder': '#413F3F',
+                'theme': '#3889f4',
+                'mainBg': '#111',
             },
             boxShadow: {
-                'nailShadow': "0px 0px 22px 9px #ff4d06",
+                'nailShadow': "0px 0px 22px 9px #016DF9",
             },
             keyframes: {
                 rippleKeyframe: {
@@ -47,5 +44,6 @@ module.exports = {
     plugins: [
         require('@tailwindcss/forms'),
         require('@tailwindcss/line-clamp'),
+        require('tailwind-scrollbar-hide')
     ],
 }

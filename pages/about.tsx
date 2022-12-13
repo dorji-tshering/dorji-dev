@@ -50,7 +50,7 @@ const about = () => {
                 <section className="lg:w-[30%] mb-10 lg:mb-0 lg:flex lg:items-center">
                     <div className="relative w-full max-w-[200px] lg:max-w-[300px] aspect-square">
                         <Image 
-                            className="object-cover grayscale rounded-full p-[2px] border border-solid border-gray-400"
+                            className="object-cover rounded-full p-[2px] border border-solid border-gray-400"
                             src="/images/dorji.jpg" 
                             alt="Image of Dorji Tshering"
                             fill
