@@ -35,15 +35,14 @@ const Work = () => {
 
     return (
         <div className="homeSectionContainer">
-            <h1 className="text-center text-myYellow text-xl font-bold mb-10">A list of my projects that I have done over the years.</h1>
+            <h1 className="text-center text-myYellow/90 ubuntu text-xl font-bold mb-10">A list of my projects that I have done over the years.</h1>
             {/* Featured Project */}
             <section>
-                <h4 
-                    className={` text-center text-xs font-bold italic text-red-500 tracking-widest mb-10`}>
+                <h4 className={` text-center text-xs mb-10 tracking-[10px]`}>
                     FEATURED PROJECT
                 </h4>
-                <div className="relative rounded group bg-theme/10 max-w-[450px] border border-theme/80 transition-all
-                        mx-auto py-8 px-9 overflow-hidden shadow-sm shadow-black hover:shadow-xl hover:shadow-black">
+                <div className="relative rounded group border border-gray-700 ring-4 ring-gray-700/40 max-w-[450px] transition-all
+                    mx-auto p-6 overflow-hidden shadow-sm shadow-black hover:shadow-xl hover:shadow-black">
                     <div className="flex justify-between mb-5">
                         <h4 className="my-0 font-[500]">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
@@ -61,7 +60,7 @@ const Work = () => {
                 </div>
             </section>
             <span className="block h-[1px] w-[80%] my-16 mb-14 mx-auto
-                bg-gradient-to-r from-black via-gray-400 to-black">
+                bg-gradient-to-r from-black via-gray-700 to-black">
             </span>
             {/* Prioritized Projects */}
             <motion.section
@@ -69,15 +68,15 @@ const Work = () => {
                 whileInView='whileInView'
                 variants={projectsWrapper}
                 viewport={{ once: false}}
-                className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4">
+                className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4">
                 {
                     prioritizedProjects.map((project) => (
                         <ProjectCard key={project.id} project={project} animeVariant={projectVariant}/>
                     ))
                 }
             </motion.section>
-            <Link className="text-theme block mx-auto w-fit mt-10 
-              hover:text-theme/75 transition-all duration-300 ease-out" href="/projects">View all projects
+            <Link className="text-theme block mx-auto w-fit mt-10 px-4 py-2 rounded-md font-[500]
+              hover:bg-theme/10 transition-all duration-300 ease-out" href="/projects">View all projects
             </Link>
         </div>
     )

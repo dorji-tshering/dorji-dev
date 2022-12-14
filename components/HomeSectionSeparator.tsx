@@ -18,6 +18,9 @@ const wrapper = {
 const itemVertical = {
     initial: {
         height: 0,
+        transition: {
+            delay: 3
+        }
     },
     whileInView: {
         height: 132,
@@ -58,22 +61,34 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
             className='h-[300px] flex flex-col items-center justify-start'>
             <motion.span 
                 variants={itemVertical}
-                className='w-[3px] bg-gradient-to-b from-transparent to-theme rounded'
+                className={classNames(
+                    'w-[3px] bg-gradient-to-b rounded',
+                    header === 'work' && 'from-theme to-myYellow/60',
+                    header === 'about' && 'from-myYellow to-myCyan/60',
+                    header === 'stack' && 'from-myCyan to-myRed/60',
+                    header === 'contact' && 'from-myRed to-myGreen/60'
+                )}
             />
             <div 
                 className='w-full flex justify-center items-center'>
                 <motion.span
                     variants={itemHorizontal}
-                    className='h-[3px] bg-gradient-to-r from-transparent to-theme rounded-tr-sm rounded-br-sm block'
+                    className={classNames(
+                        'h-[1px] bg-gray-700 block',
+                        // header === 'work' && 'from-myYellow',
+                        // header === 'about' && 'from-myCyan',
+                        // header === 'stack' && 'from-myRed',
+                        // header === 'contact' && 'from-myGreen'
+                    )}
                 />
                 <motion.span
                     variants={headerVariant}
                     className={classNames(
-                        'block w-fit whitespace-nowrap font-bold mx-2',
-                        header === 'work' && 'text-[#fbc765]',
-                        header === 'about' && 'text-[#f56c62]',
-                        header === 'stack' && 'text-[#c766f4]',
-                        header === 'contact' && 'text-[#62f4ab]'
+                        'block w-fit whitespace-nowrap text-slate-300 font-bold mx-2',
+                        header === 'work' && 'drop-shadow-workGlow',
+                        header === 'about' && 'drop-shadow-aboutGlow',
+                        header === 'stack' && 'drop-shadow-stackGlow',
+                        header === 'contact' && 'drop-shadow-contactGlow'
                     )}>
                     {
                         header === 'work' && 'MY WORK' ||
@@ -84,13 +99,25 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
                 </motion.span>
                 <motion.span
                     variants={itemHorizontal}
-                    className='h-[3px] bg-gradient-to-r from-theme to-transparent rounded-tl-sm rounded-bl-sm block'
+                    className={classNames(
+                        'h-[1px] bg-gray-700 block',
+                        // header === 'work' && 'from-myYellow',
+                        // header === 'about' && 'from-myCyan',
+                        // header === 'stack' && 'from-myRed',
+                        // header === 'contact' && 'from-myGreen'
+                    )}
                 />
             </div>
 
             <motion.span
                 variants={itemVertical}
-                className='w-[3px] bg-gradient-to-t from-transparent to-theme rounded'
+                className={classNames(
+                    'w-[3px] rounded bg-gradient-to-b',
+                    header === 'work' && 'from-myYellow via-myYellow/50',
+                    header === 'about' && 'from-myCyan via-myCyan/50',
+                    header === 'stack' && 'from-myRed via-myRed/50',
+                    header === 'contact' && 'from-myGreen via-myGreen/50'
+                )}
             />
         </motion.div>
     )

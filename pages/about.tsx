@@ -14,7 +14,7 @@ const about = () => {
                 <meta name='description' content='I am a self-taught Frontend/Wordpress developer. My tech stacks include mostly of React and Next.'/>
             </Head>
             <div className="relative">
-                <h1 className="mb-12 text-2xl font-[600] pr-11 text-white">A little extra about myself</h1>
+                <h1 className="mb-12 text-2xl ubuntu font-[600] pr-11 text-white">A little extra about myself</h1>
                 <button 
                     className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
                         w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg
@@ -22,7 +22,8 @@ const about = () => {
                     onClick={() => router.back()}><IoMdArrowBack /></button>
             </div>
             <div className="flex flex-col-reverse lg:flex-row">
-                <section className="relative rounded p-6 sm:p-10 flex justify-center items-center bg-lightBg lg:w-[70%] lg:mr-12 overflow-hidden">
+                <section className="relative rounded px-6 py-10 sm:p-10 flex justify-center 
+                    items-center bg-lightBg lg:w-[70%] lg:mr-12 overflow-hidden border border-theme/50">
                     <div>
                         <p className="mb-6">
                             As for the programming languages, I have made myself familiar with C, Java, Python, Javascript, and Typescript. 

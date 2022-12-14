@@ -1,36 +1,10 @@
-import { FormEvent, useState } from "react"
-import { useNoticeContext } from "../components/utils/NoticeContext"
-import sendEmail from "../components/utils/SendEmail"
-import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { IoMdArrowBack } from "react-icons/io"
-import { useRouter } from 'next/router'
 import Head from 'next/head'
+import ContactForm from '../components/ContactForm'
+import { useRouter } from 'next/router'
 
 const contact = () => {
-    const [name, setName] = useState<string>('');
-    const [email, setEmail] = useState<string>('');
-    const [subject, setSubject] = useState<string>('');
-    const [message, setMessage] = useState<string>('');
-    const [isLoading, setLoading] = useState<boolean>(false);
-    
-    const { showNotice, setNoticeMessage, isSuccess, isError } = useNoticeContext();
-    const router = useRouter();
-
-    const send = (event: FormEvent) => {
-        event.preventDefault();
-        setLoading(true);
-        sendEmail(name, email, subject, message).then(res => {
-            setNoticeMessage('I have received your message. Thank you for reaching out. Will get back to you as soon as I can.');
-            showNotice(true);
-            isSuccess(true);
-            setLoading(false);
-        }).catch(err => {
-            setNoticeMessage('Oops, something is not right. Can you try again please?');
-            showNotice(true);
-            isError(true);
-            setLoading(false);
-        });
-    } 
+    const router = useRouter()
  
     return (
         <div className="pageContainer">
@@ -39,7 +13,7 @@ const contact = () => {
                 <meta name='description' content='If you want to discuss any frontend or wordpress projects, you can contact me at the click of a button.' />
             </Head>
             <div className="relative">
-                <h3 className="mb-12 text-2xl font-[600] text-white">Contact Me</h3>
+                <h3 className="mb-12 ubuntu text-2xl font-[600] text-white">Contact Me</h3>
                 <button 
                     className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
                         w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full
@@ -56,58 +30,7 @@ const contact = () => {
                         <p className="text-gray-400 sm:mx-0 lg:mx-0">Phuentsholing, Chukha, Bhutan</p>
                     </address>
                 </div>
-                <form className="w-full lg:w-[59%]" onSubmit={send}>
-                    <div className="sm:flex sm:justify-between">
-                        <input 
-                            className={`formInput form-input !rounded w-full sm:w-[49%] lg:mt-0`} 
-                            type="text" 
-                            name="name" 
-                            id="name" 
-                            placeholder="Name"
-                            onChange={(ev) => setName(ev.currentTarget.value)}
-                            required
-                        />
-                        <input 
-                            className={`formInput form-input !rounded w-full sm:w-[49%] lg:mt-0`}
-                            type="email" 
-                            name="email" 
-                            id="email" 
-                            placeholder="Email"
-                            onChange={(ev) => setEmail(ev.currentTarget.value)}
-                            required
-                        />
-                    </div>
-                    <input 
-                        className={`formInput form-input !rounded w-full`}
-                        type="text" 
-                        name="subject"
-                        placeholder="Subject"
-                        onChange={(ev) => setSubject(ev.currentTarget.value)}
-                        required
-                    />
-                    <textarea 
-                        className={`formInput form-textarea !rounded w-full resize-y`} 
-                        name="message" 
-                        id="message" 
-                        rows={6} 
-                        placeholder="Message"
-                        onChange={(ev) => setMessage(ev.currentTarget.value)}
-                        required></textarea>
-                    <button 
-                        disabled={isLoading ? true : false}
-                        className={`flex items-center mx-auto sm:ml-auto sm:mr-0 md:mx-auto lg:ml-auto lg:mr-0 ripple relative overflow-hidden rounded
-                        px-4 py-2 tracking-wider mt-2 !bg-theme text-white text-sm hover:ring-4 hover:ring-theme/40
-                        transition-all duration-300 font-[400] ${isLoading ? 'cursor-not-allowed' : ''}`} 
-                        type="submit">
-                            Send Message 
-                            {
-                                isLoading && <AiOutlineLoading3Quarters
-                                className="animate-spin ml-2" 
-                                size={16}
-                            />
-                            }
-                    </button>
-                </form>
+                <ContactForm/>
             </section>
         </div>
     )

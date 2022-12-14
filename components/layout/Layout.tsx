@@ -7,6 +7,7 @@ import { NoticeProvider } from '../utils/NoticeContext'
 import { usePreserveScroll } from '../utils/usePreserveScroll'
 import isMobile from '../utils/isMobile'
 import { useCycle } from 'framer-motion'
+import Footer from '../Footer'
 
 const Layout = ({ children }: { children: React.ReactElement }) => {
     const [open, cycleOpen] = useCycle(false, true);
@@ -49,11 +50,12 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
                         notice && 
                         <Notice 
                             message={noticeMessage} 
-                            success={success ? true : undefined} 
-                            error={error ? true : undefined}
+                            success={success ? true : false} 
+                            error={error ? true : false}
                             />
                     }
                     { children }
+                    <Footer/>
                 </NoticeProvider>
             </div>
         </div> 

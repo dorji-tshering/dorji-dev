@@ -58,13 +58,6 @@ const DesktopSidebar = () => {
                         <BsGithub size={24}/>
                     </Link>
                 </div>
-                <Link 
-                    className="mx-auto block w-fit my-10 text-gray-400
-                        hover:underline hover:underline-offset-4 hover:decoration-dotted" 
-                    target="_blank" 
-                    href="https://nextjs.org/">
-                    Made with NextJs
-                </Link>
             </div>
             
         </div>

@@ -108,12 +108,6 @@ const MobileMenu = ({ open, cycleOpen }: Props) => {
                                             <BsGithub size={24}/>
                                         </Link>
                                     </div>
-                                    <Link 
-                                        className="mx-auto block w-fit my-10 text-gray-400" 
-                                        target="_blank" 
-                                        href="https://nextjs.org/">
-                                        Made with NextJs
-                                    </Link>
                                 </div>
                             </motion.aside>
                         </motion.div>)

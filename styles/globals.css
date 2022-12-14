@@ -21,15 +21,14 @@
 }
 
 .techStack {
-    @apply mx-3 mb-8 py-[6px] px-4 bg-gray-700/30 text-sm text-slate-400
-    rounded-full text-center shadow-sm shadow-black border-t
-    border-t-gray-700 font-[500]
+    @apply mx-3 mb-8 py-[6px] px-4 text-xs tracking-wider 
+    text-center uppercase bg-gray-800 rounded-sm border-t border-b border-gray-700
 }
 
 .formInput {
     @apply bg-gray-700/10 my-3 focus:ring-theme/20 focus:bg-transparent
     focus:ring-[3px] focus:border-theme text-gray-100
-    border-gray-700
+    border-gray-700 text-[15px]
 }
 
 .pageContainer {
@@ -41,8 +40,8 @@
     @apply absolute rounded-full scale-0 animate-rippleAnimation bg-gray-700
 }
 
-.giveGlow {
-    filter: drop-shadow(0px 0px 60px rgba(81, 59, 250));
+.ubuntu {
+    font-family: 'ubuntu';
 }
 
 /* change autofill background for chrome */
@@ -64,13 +63,13 @@ select:-webkit-autofill:focus {
 
 /* base styles */
 html {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 300;
     height: 100%;
 }
 
 body {
-    font-size: 16px;
+    font-size: 15px;
     min-height: 100%;
     color: white;
     background-color: #000;

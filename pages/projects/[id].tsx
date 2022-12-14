@@ -53,7 +53,7 @@ const ProjectDetails = () => {
                 <>
                     <section>
                         <div className="flex items-center flex-wrap relative pr-11">
-                            <h1 className="mb-4 text-xl md:text-2xl mr-6 font-[600] text-white">{project.title}</h1>
+                            <h1 className="mb-4 text-xl ubuntu md:text-2xl mr-6 font-[600] text-white">{project.title}</h1>
                             <p className="mb-4 text-xs bg-gray-600 px-3 py-1 rounded">{project.category}</p>
                             <button 
                                 className="absolute right-0 top-0 text-xl text-gray-300 h-8

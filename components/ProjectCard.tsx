@@ -24,7 +24,7 @@ const ProjectCard = ({project, animeVariant}: Props) => {
             variants={animeVariant}
             whileHover={{y: -5}}
             className="rounded p-6 my-3 lg:mx-2 group shadow-sm shadow-black border-t
-            border-t-gray-700 bg-gray-700/30" 
+            border-t-gray-700 border-l border-l-gray-700 bg-gray-700/10" 
             key={project.id}>
             <div className="flex justify-between mb-5">
                 <h4 className="my-0 font-[500]">{ project.title }</h4>

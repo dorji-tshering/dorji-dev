@@ -12,11 +12,18 @@ module.exports = {
                 'mainBg': '#111',
                 'myRed': '#f56c62',
                 'myYellow': '#fbc765',
-                'myPurple': '#c766f4',
+                'myCyan': '#7efbfd',
                 'myGreen': '#62f4ab'
             },
             boxShadow: {
                 nailShadow: "0px 0px 22px 9px #016DF9",
+            },
+            dropShadow: {
+                svgGlow: '0px 0px 30px #3889f4',
+                workGlow: '0px 0px 10px #fbc765',
+                aboutGlow: '0px 0px 10px #7efbfd',
+                stackGlow: '0px 0px 10px #f56c62',
+                contactGlow: '0px 0px 10px #62f4ab'
             },
             keyframes: {
                 rippleKeyframe: {
@@ -27,18 +34,9 @@ module.exports = {
                         transform: 'scale(2)', opacity: '0'
                     },
                 },
-                glow: {
-                    '0%': {
-                      textShadow: '0 0 10px #2d9da9'
-                    },
-                    "100%": {
-                      textShadow: '0 0 20px #34b3c1, 0 0 10px #4dbbc7'
-                    }
-                  }
             },
             animation: {
                 rippleAnimation: 'rippleKeyframe 650ms ease-in-out',
-                textGlow: 'glow 2s ease-in-out infinite alternate',
             },
         },
     },
