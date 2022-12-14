@@ -63,13 +63,13 @@ select:-webkit-autofill:focus {
 
 /* base styles */
 html {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
     height: 100%;
 }
 
 body {
-    font-size: 15px;
+    font-size: 16px;
     min-height: 100%;
     color: white;
     background-color: #000;
