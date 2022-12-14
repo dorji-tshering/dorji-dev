@@ -57,7 +57,7 @@ const MobileMenu = ({ open, cycleOpen }: Props) => {
                             exit={{
                                 width: 0,
                                 opacity: .1,
-                                transition: { delay: .6, duration: 0.3 }
+                                transition: { delay: .4, duration: 0.1 }
                             }}
                             onClick={() => {cycleOpen()}}
                             className='fixed z-[100] h-full md:hidden bg-mainBg/50 backdrop-blur-sm'>

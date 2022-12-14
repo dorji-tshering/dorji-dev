@@ -12,16 +12,21 @@ const About = () => {
                 width={200}
                 height={200}
             />
-            <p className="pt-[110px] px-6 pb-7 sm:px-10 sm:pb-9 bg-myCyan/5
-                relative -top-20 max-w-2xl text-center border-r border-l
-                border-myCyan/80">
-                I am a college dropout and hence a self-taught developer. I started learning
-                web development at the start of 2020. Prior to that, I have had a little bit of experience
-                coding in C language as taught in the college. Within the span of almost two years, 
-                I have made myself familiar with Frontend, Backend, Mobile Application, and Wordpress development
-                via personal projects mostly and a few client projects. However, as time went by, I have 
-                committed myself fully to the Frontend aspect of web development which I truly enjoy. 
-            </p>
+            <div className="relative">
+                <p className="pt-[110px] px-6 pb-7 sm:px-10 sm:pb-9
+                    relative -top-20 max-w-2xl text-center z-10">
+                    I am a college dropout and hence a self-taught developer. I started learning
+                    web development at the start of 2020. Prior to that, I have had a little bit of experience
+                    coding in C language as taught in the college. Within the span of almost two years, 
+                    I have made myself familiar with Frontend, Backend, Mobile Application, and Wordpress development
+                    via personal projects mostly and a few client projects. However, as time went by, I have 
+                    committed myself fully to the Frontend aspect of web development which I truly enjoy. 
+                </p>
+                <div className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
+                    transform rotate-2 rounded-xl border-b border-theme/90'></div>
+                <div className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
+                    transform -rotate-2 rounded-xl border-b border-theme/90'></div>
+            </div>
         </div>
     </div>
   )
