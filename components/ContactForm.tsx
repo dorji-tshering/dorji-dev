@@ -71,16 +71,16 @@ const ContactForm = () => {
                 required></textarea>
             <button
                 disabled={isLoading ? true : false}
-                className={`w-full mt-5 py-5 border-t border-b border-t-theme border-b-theme 
+                className={`w-full flex items-center justify-center mt-5 py-5 border-t border-b border-t-theme border-b-theme 
                     !bg-theme/10 text-xs tracking-[2px] hover:!bg-theme hover:rounded-md
                     transition-all duration-500 ${isLoading ? 'cursor-not-allowed' : ''}`} 
                 type="submit">
                     SEND MESSAGE
                     {
                         isLoading && <AiOutlineLoading3Quarters
-                        className="animate-spin ml-2" 
-                        size={16}
-                    />
+                            className="animate-spin ml-2" 
+                            size={16}
+                        />
                     }
             </button>
         </form>
