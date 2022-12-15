@@ -68,7 +68,7 @@ const MobileMenu = ({ open, cycleOpen }: Props) => {
         
                                 {/* logo */}
                                 <div className="px-7 py-7 text-center shadow-sm shadow-black">
-                                    <Link onClick={() => cycleOpen()} className="text-[18px] mt-1 font-[600]" href='/'>
+                                    <Link onClick={() => cycleOpen()} className="text-[18px] mt-1 font-[600] ubuntu" href='/'>
                                         <span className="text-theme">Dorji</span> <span>Tshering</span>
                                     </Link>
                                     <p className="text-lightGray text-xs mt-1 font-[mali]">web developer</p>

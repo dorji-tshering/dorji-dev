@@ -25,7 +25,7 @@ const DesktopSidebar = () => {
             shadow-md shadow-[#444]">
             {/* logo */}
             <div className="px-7 py-7 text-center">
-                <Link className="text-[18px] mt-1 font-[600]" href='/'>
+                <Link className="text-[18px] mt-1 font-[600] ubuntu" href='/'>
                     <span className="text-theme">Dorji</span> <span>Tshering</span>
                 </Link>
                 <p className="font-[mali] text-xs mt-1">web developer</p>

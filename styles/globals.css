@@ -64,7 +64,7 @@ select:-webkit-autofill:focus {
 /* base styles */
 html {
     font-family: 'Figtree', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     height: 100%;
 }
 

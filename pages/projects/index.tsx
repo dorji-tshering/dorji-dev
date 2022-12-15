@@ -49,7 +49,7 @@ const ProjectHome = () => {
                 }}
                 className="pageContainer">
                 <div className="relative">
-                    <h1 className="text-2xl ubuntu mb-8 lg:mb-12 font-[600] pr-11 text-white">My Projects</h1>
+                    <h1 className="text-2xl ubuntu mb-8 lg:mb-12 font-[600] pr-11 text-myYellow/90">My Projects</h1>
                     <button 
                         className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
                             w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
@@ -22,10 +23,20 @@ const About = () => {
                     via personal projects mostly and a few client projects. However, as time went by, I have 
                     committed myself fully to the Frontend aspect of web development which I truly enjoy. 
                 </p>
-                <div className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
-                    transform rotate-2 rounded-xl border-b border-theme/90'></div>
-                <div className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
-                    transform -rotate-2 rounded-xl border-b border-theme/90'></div>
+                <motion.div 
+                    initial={{x: -50,}}
+                    whileInView={{x: 0, rotate: -1}}
+                    viewport={{once: false, margin: "-200px 0px"}}
+                    transition={{duration: 2}}
+                    className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
+                    rounded-xl border-b border-theme/90'></motion.div>
+                <motion.div 
+                    initial={{x: 50,}}
+                    whileInView={{x: 0, rotate: 1}}
+                    viewport={{once: false, margin: "100px"}}
+                    transition={{duration: 2}}
+                    className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
+                    rounded-xl border-b border-theme/90'></motion.div>
             </div>
         </div>
     </div>

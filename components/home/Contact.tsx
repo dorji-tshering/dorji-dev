@@ -6,9 +6,9 @@ const Contact = () => {
     return (
         <div className="homeSectionContainer">
             <h1 className="text-xl ubuntu text-myGreen/90 font-bold text-center mb-10">I love being reached out!</h1>
-            <section className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between">
+            <section className="flex flex-col md:flex-col lg:flex-row justify-between">
                 <div className="sm:w-[40%] md:w-[100%] lg:w-[40%]">
-                    <p className="text-center sm:text-left md:text-center lg:text-left">I am interested in frontend and wordpress projects. If you you want to 
+                    <p className="text-center lg:text-left lg:mr-5">I am interested in frontend and wordpress projects. If you you want to 
                         discuss about the project or other things for that matter, feel free to reach me via this form. 
                     </p>
                     <address className="mt-10 mb-6 sm:mb-0 md:mb-6 lg:mb-0 flex justify-center sm:block sm:text-[15px] md:flex lg:block text-xs not-italic">

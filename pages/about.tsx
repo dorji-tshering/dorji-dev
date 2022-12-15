@@ -14,7 +14,7 @@ const about = () => {
                 <meta name='description' content='I am a self-taught Frontend/Wordpress developer. My tech stacks include mostly of React and Next.'/>
             </Head>
             <div className="relative">
-                <h1 className="mb-12 text-2xl ubuntu font-[600] pr-11 text-white">A little extra about myself</h1>
+                <h1 className="mb-12 text-2xl ubuntu font-[600] pr-11 text-myCyan/90">A little extra about myself</h1>
                 <button 
                     className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
                         w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg

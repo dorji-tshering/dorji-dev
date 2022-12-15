@@ -1,5 +1,30 @@
 import { motion } from 'framer-motion'
 
+const wrapper = {
+    initial: {
+        transition: {
+            staggerChildren: .2,
+        }
+    },
+    animate: {
+        transition: {
+            staggerChildren: .2,
+        }
+    }
+}
+
+const item = {
+    initial: {
+        x: 10, y: 10, opacity: 0
+    },
+    animate: {
+        x:0, y:0, opacity: 1
+    }
+}
+
+const techStack = ['HTML', 'CSS', 'Javascript', 'Typescript', 'ReactJS', 'NextJs', 'Firebase', 'Tailwind',
+    'HeadlessUI']
+
 const TechStack = () => {
     return (
         <div className="homeSectionContainer">
@@ -8,19 +33,19 @@ const TechStack = () => {
                 Languages, frameworks, libraries, and technologies  I have experience with.
             </h1>
             <motion.div 
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1, transition: {staggerChildren: 2} }}
-                viewport={{ once: false}}
+                initial='initial'
+                whileInView='animate'
+                viewport={{ once: false, margin: "-100px 0px"}}
+                variants={wrapper}
                 className="flex flex-wrap justify-center mx-auto max-w-[500px]">
-                <div className="techStack">HTML</div>
-                <div className="techStack">CSS</div>
-                <div className="techStack">Javascript</div>
-                <div className="techStack">Typescript</div>
-                <div className="techStack">React</div>
-                <div className="techStack">NextJs</div>
-                <div className="techStack">Firebase</div>
-                <div className="techStack">Tailwind</div>
-                <div className="techStack">Styled Components</div>
+                {
+                    techStack.map((tech, idx) => (
+                        <motion.div 
+                            variants={item}
+                            key={idx} 
+                            className="techStack">{tech}</motion.div>
+                    ))
+                }
             </motion.div>
         </div>
     )
