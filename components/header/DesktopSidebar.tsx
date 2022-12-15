@@ -5,7 +5,6 @@ import { BsGithub } from 'react-icons/bs';
 import rippleEffect from '../utils/RippleEffect';
 import { useEffect } from 'react';
 
-
 const links = [
     { name: "Home", to: "/", id: 1 },
     { name: "About", to: "/about", id: 2 },

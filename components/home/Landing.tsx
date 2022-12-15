@@ -1,13 +1,11 @@
 import { DelayChar } from "../TextAnimations"
 import { TiArrowSortedDown } from 'react-icons/ti'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from "react"
+import { motion } from 'framer-motion'
 
 const Landing = () => {
-    const ref = useRef<any>()
 
     return (
-        <div className="homeSectionContainer flex flex-col justify-center items-center 
+        <div className="homeSectionContainer text-center flex flex-col justify-center items-center 
             relative h-[calc(100vh-100px)] md:h-[calc(100vh-40px)]">
             <p className="text-theme font-bold mb-8 lg:mb-10">Hello, I am</p>
             <h1 className="text-3xl font-[700] sm:text-4xl md:text-5xl
@@ -30,7 +28,7 @@ const Landing = () => {
                     initial={{opacity: 1}}
                     whileInView={{opacity: 0}}
                     viewport={{once: false, margin: "0px 0px -300px 0px"}}
-                    className='animate-bounce block text-gray-600' ref={ref}>
+                    className='animate-bounce block text-gray-600'>
                     <TiArrowSortedDown size={34}/>
                 </motion.span>
             </div>

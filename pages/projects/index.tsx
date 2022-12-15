@@ -3,7 +3,7 @@ import { IoMdArrowBack } from "react-icons/io"
 import Projects from "../../components/utils/Project"
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import ProjectCard from "../../components/ProjectCard"
 
 const projects = Projects();

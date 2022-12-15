@@ -1,5 +1,4 @@
 import ContactForm from "../ContactForm";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Contact = () => {
     

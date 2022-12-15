@@ -97,10 +97,6 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
                     variants={itemHorizontal}
                     className={classNames(
                         'h-[1px] bg-gray-700 block',
-                        // header === 'work' && 'from-myYellow',
-                        // header === 'about' && 'from-myCyan',
-                        // header === 'stack' && 'from-myRed',
-                        // header === 'contact' && 'from-myGreen'
                     )}
                 />
             </div>
