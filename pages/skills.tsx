@@ -28,9 +28,14 @@ const Skills = () => {
                         It’s been more than two years  since I started learning web development. 
                         Within that duration, I have equipped myself with skills and technologies. 
                         I have done multiple projects both personal and as a part of a job interview. 
-                        The percentage ratings of the languages and frameworks depict my experience and knowledge
-                        of the particular technology which is solely based on the projects I have done over the years 
-                        and the confident I feel going forward.
+                        The percentage ratings of the languages and frameworks depict my 
+                        <span className='text-theme mx-2 font-[500]'>experience</span> and the 
+                        <span className='text-theme mx-2 font-[500]'>confidence</span> 
+                        I feel going forward to build a any web applications
+                        which is solely based on the projects I have done over the years. Please don't mistake the 
+                        ratings to the knowledge I have of the technology as I believe one can't possibly
+                        accurately determine one's grasp of the technology given the nature and amount of details and concepts. 
+                        I learn and pick new concepts as and when I am presented with new projects and challenges. 
                     </p>
                 </section>
                 <section className="lg:flex-1 px-8 pt-8 pb-2 rounded-br border-b border-r border-gray-700">
