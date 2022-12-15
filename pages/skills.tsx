@@ -29,8 +29,8 @@ const Skills = () => {
                         Within that duration, I have equipped myself with skills and technologies. 
                         I have done multiple projects both personal and as a part of a job interview. 
                         The percentage ratings of the languages and frameworks depict my 
-                        <span className='text-theme mx-2 font-[500]'>experience</span> and the 
-                        <span className='text-theme mx-2 font-[500]'>confidence</span> 
+                        <span className='text-theme mx-[6px] font-[500]'>experience</span>and the 
+                        <span className='text-theme mx-[6px] font-[500]'>confidence</span> 
                         I feel going forward to build a any web applications
                         which is solely based on the projects I have done over the years. Please don't mistake the 
                         ratings to the knowledge I have of the technology as I believe one can't possibly
