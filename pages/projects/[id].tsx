@@ -6,6 +6,7 @@ import { TbBrandGithub } from 'react-icons/tb';
 import { IoMdArrowBack } from 'react-icons/io';
 import { useEffect, useState } from 'react';
 import { GoPrimitiveDot } from 'react-icons/go';
+import Head from 'next/head';
 
 const getRepoLs = async(repoName: string) => {
     let repoURL = "https://api.github.com/repos/dorji-tshering";
@@ -48,6 +49,9 @@ const ProjectDetails = () => {
     return (
         <div className="mt-[62px] md:mt-0 py-12 md:py-16 px-6 sm:px-10 md:p-14 lg:px-24 min-h-screen
             md:flex md:flex-col md:justify-between">
+            <Head>
+                <title>Dorji &bull; {(router.query.id as string)}</title>
+            </Head>
             {
                 project && 
                 <>
