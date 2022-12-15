@@ -6,7 +6,7 @@ const Landing = () => {
 
     return (
         <div className="homeSectionContainer text-center flex flex-col justify-center items-center 
-            relative h-[calc(100vh-100px)] md:h-[calc(100vh-40px)]">
+            relative h-[calc(100vh-100px)] md:h-[calc(100vh-40px)] min-h-[500px]">
             <p className="text-theme font-bold mb-8 lg:mb-10">Hello, I am</p>
             <h1 className="text-3xl font-[700] sm:text-4xl md:text-5xl
                 lg:text-7xl mb-6 lg:mb-8 ubuntu">DORJI TSHERING</h1>
