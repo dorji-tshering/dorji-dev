@@ -13,7 +13,7 @@ const Landing = () => {
             <h4 className="text-xs md:text-sm md:tracking-widest font-['mali']">
                 <DelayChar text='FRONTEND / WORDPRESS DEVELOPER' staggerChild={.04}/>
             </h4>
-            <p className="hidden md:block absolute top-6 right-10 text-xs">Be Curious</p>
+            <p className="hidden md:block absolute top-6 right-10 text-xs text-gray-400">Be Curious</p>
             <div className='mt-20'>
                 <img src="/images/programmer.svg" 
                     alt="programmer" 
