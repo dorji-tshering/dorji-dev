@@ -50,7 +50,7 @@ const DesktopSidebar = () => {
                     }
                 </div>
                 {/* social */}
-                <div className="flex justify-center">
+                <div className="flex justify-center mb-10">
                     <Link className="socialLink mx-3" target="_blank" href="https://twitter.com/dorjidev">
                         <GrTwitter size={24}/>
                     </Link>

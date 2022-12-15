@@ -89,14 +89,14 @@ const ProjectDetails = () => {
                             }
                         </div>
                         <div className="mb-10">
-                            <h3 className="text-xl mb-3 text-gray-300">Description</h3>
+                            <h3 className="text-xl mb-3 text-gray-400 font-[500]">Description</h3>
                             <p className="leading-6">{project.description}</p>
                         </div>
                         {
                             project.features.length > 0 
                             && 
                             <div className="mb-10">
-                                <h3 className="text-xl text-gray-300 mb-3">Features</h3>
+                                <h3 className="text-xl text-gray-400 mb-3 font-[500]">Features</h3>
                                 <ul className="leading-7">
                                     {
                                         project.features.map((feature, idx) => 
@@ -115,7 +115,7 @@ const ProjectDetails = () => {
                         {
                             languagePer.length > 0 ?
                             <>
-                                <h3 className="text-xl mb-3 text-gray-300">Languages</h3>
+                                <h3 className="text-xl mb-3 text-gray-400 font-[500]">Languages</h3>
                                 <div className="flex flex-wrap">
                                     {
                                         languagePer.map((lang, idx) => (

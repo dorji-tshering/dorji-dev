@@ -22,8 +22,8 @@ const about = () => {
                     onClick={() => router.back()}><IoMdArrowBack /></button>
             </div>
             <div className="flex flex-col-reverse lg:flex-row">
-                <section className="relative rounded px-6 py-10 sm:p-10 flex justify-center 
-                    items-center bg-lightBg lg:w-[70%] lg:mr-12 overflow-hidden border border-theme/50">
+                <section className="px-6 py-10 sm:p-10 flex justify-center
+                    items-center lg:w-[70%] lg:mr-12 overflow-hidden border-t border-b border-gray-700">
                     <div>
                         <p className="mb-6">
                             As for the programming languages, I have made myself familiar with C, Java, Python, Javascript, and Typescript. 
@@ -43,10 +43,6 @@ const about = () => {
                             I use mostly NextJs these days for personal projects and I have had a great developer experience along the way as well.
                         </p>
                     </div>
-                    <span className="absolute animate-pulse w-2 h-2 block top-2 left-2 rounded-full bg-theme shadow-nailShadow"/>
-                    <span className="absolute w-2 h-2 top-2 right-2 rounded-full bg-theme shadow-nailShadow"/>
-                    <span className="absolute animate-pulse w-2 h-2 bottom-2 right-2 rounded-full bg-theme shadow-nailShadow"/>
-                    <span className="absolute w-2 h-2 bottom-2 left-2 rounded-full bg-theme shadow-nailShadow"/>
                 </section>
                 <section className="lg:w-[30%] mb-10 lg:mb-0 lg:flex lg:items-center">
                     <div className="relative w-full max-w-[200px] lg:max-w-[300px] aspect-square">

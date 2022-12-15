@@ -41,8 +41,11 @@ const Work = () => {
                 <h4 className={` text-center text-xs mb-10 tracking-[10px]`}>
                     FEATURED PROJECT
                 </h4>
-                <div className="relative rounded group border border-gray-700 ring-4 ring-gray-700/40 max-w-[450px] transition-all
-                    mx-auto p-6 overflow-hidden shadow-sm shadow-black hover:shadow-xl hover:shadow-black">
+                <motion.div
+                    whileHover={{scale: 1.1}}
+                    transition={{duration: .1}}
+                    className="relative rounded group border border-gray-700 ring-4 ring-gray-700/40 max-w-[450px] transition-all
+                    mx-auto p-6 overflow-hidden shadow-sm">
                     <div className="flex justify-between mb-5">
                         <h4 className="my-0 font-[500]">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
@@ -57,7 +60,7 @@ const Work = () => {
                     <GoPrimitiveDot className="absolute top-1 right-1 text-gray-600"/>
                     <GoPrimitiveDot className="absolute bottom-1 right-1 text-gray-600"/>
                     <GoPrimitiveDot className="absolute bottom-1 left-1 text-gray-600"/>
-                </div>
+                </motion.div>
             </section>
             <span className="block h-[1px] w-[80%] my-16 mb-14 mx-auto
                 bg-gradient-to-r from-black via-gray-700 to-black">
