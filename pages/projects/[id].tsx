@@ -47,7 +47,7 @@ const ProjectDetails = () => {
     }, [router.query.id]);
 
     return (
-        <div className="mt-[62px] md:mt-0 py-12 md:py-16 px-6 sm:px-10 md:p-14 lg:px-24 min-h-screen
+        <div className="mt-[62px] md:mt-0 py-12 md:py-16 px-6 sm:px-10 md:p-14 lg:px-24
             md:flex md:flex-col md:justify-between">
             <Head>
                 <title>Dorji &bull; {(router.query.id as string)}</title>
