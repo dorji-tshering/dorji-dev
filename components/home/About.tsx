@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import isMobile from '../utils/isMobile'
 
 const About = () => {
+  const isMb = isMobile()
+  
   return (
     <div className="homeSectionContainer">
         <h1 className="text-myCyan/90 ubuntu text-xl text-center font-bold mb-10">Few words about me.</h1>
