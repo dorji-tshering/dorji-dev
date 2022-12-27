@@ -32,11 +32,7 @@ const about = () => {
                         </p>
                         <p className="mb-6">
                             I have built a fully featured e-commerce website using Wordpress/Woocommerce for a client which you can 
-<<<<<<< HEAD
-                            visit <Link className="text-gray-400 underline underline-offset-2 decoration-dotted hover:text-theme transition-all duration-500" target="_blank" href="https://tuo.shopping">here</Link>.
-=======
-                            visit <Link className="text-gray-400 underline underline-offset-2 decoration-dotted hover:text-theme transition-all duration-500" target="_blank" href="https://tuo.shopping">here</Link>. 
->>>>>>> f6007385d72c71e369ea89c49fccb41d499ef700
+                            visit <a className="text-gray-400 underline underline-offset-2 decoration-dotted hover:text-theme transition-all duration-500" target="_blank" href="https://tuo.shopping">here</a>. 
                             Now I am fully confident that I can build any 
                             production-ready website with Wordpress to the customization of the client.
                         </p>

@@ -15,6 +15,9 @@ module.exports = {
                 'myCyan': '#7efbfd',
                 'myGreen': '#62f4ab'
             },
+            screens: {
+                xs: '481px'
+            },
             boxShadow: {
                 nailShadow: "0px 0px 22px 9px #016DF9",
             },

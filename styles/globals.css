@@ -16,13 +16,13 @@
 }
 
 .homeSectionContainer {
-    @apply px-4 py-10 sm:px-10 mx-3 mb-5 first:mt-[80px] 
+    @apply xs:px-4 py-10 sm:px-10 mx-3 mb-5 first:mt-[80px] 
     md:first:mt-5 md:mx-5
 }
 
 .techStack {
     @apply mx-3 mb-8 py-[6px] px-4 text-xs tracking-wider 
-    text-center uppercase bg-gray-800 rounded-sm border-t border-b border-gray-700
+    text-center uppercase rounded-sm border border-theme/50
 }
 
 .formInput {

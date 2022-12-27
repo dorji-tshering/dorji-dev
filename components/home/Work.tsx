@@ -38,13 +38,13 @@ const Work = () => {
             <h1 className="text-center text-myYellow/90 ubuntu text-xl font-bold mb-10">A list of my projects that I have done over the years.</h1>
             {/* Featured Project */}
             <section>
-                <h4 className={` text-center text-xs mb-10 tracking-[10px]`}>
+                <h4 className={` text-center text-theme/80 font-[600] text-xs mb-10 tracking-wide`}>
                     FEATURED PROJECT
                 </h4>
                 <motion.div
-                    whileHover={{scale: 1.1}}
+                    whileHover={{scale: 1.05}}
                     transition={{duration: .1}}
-                    className="relative rounded group border border-gray-700 ring-4 ring-gray-700/40 max-w-[450px] transition-all
+                    className="relative rounded group border bg-theme/5 border-theme max-w-[450px] transition-all
                     mx-auto p-6 overflow-hidden shadow-sm">
                     <div className="flex justify-between mb-5">
                         <h4 className="my-0 font-[500]">{ featuredProject.title }</h4>

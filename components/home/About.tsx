@@ -27,15 +27,15 @@ const About = () => {
                         committed myself fully to the Frontend aspect of web development which I truly enjoy. 
                     </p>
                     <motion.div 
-                        initial={{x: isMb ? -20 : -50,}}
-                        whileInView={{x: 0, rotate: -1}}
+                        initial={{y: isMb ? -20 : -30,}}
+                        whileInView={{y: 0, rotate: -1}}
                         viewport={{once: false, margin: "-200px 0px"}}
                         transition={{duration: 2}}
                         className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
                         rounded-xl border-b border-theme/90'></motion.div>
                     <motion.div 
-                        initial={{x: isMb ? 20 : 50,}}
-                        whileInView={{x: 0, rotate: 1}}
+                        initial={{y: isMb ? 20 : 30,}}
+                        whileInView={{y: 0, rotate: 1}}
                         viewport={{once: false, margin: "100px"}}
                         transition={{duration: 2}}
                         className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
