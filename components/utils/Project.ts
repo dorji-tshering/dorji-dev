@@ -78,7 +78,7 @@ const Projects = () => {
             category: 'SPA',
             featured: false,
             github: 'https://github.com/dorji-tshering/React-Calculator',
-            hostedLink: 'https://dorji-tshering.github.io/React-Calculator/',
+            hostedLink: 'https://react-cal-one.vercel.app/',
             techStacks: ['ReactJs'],
             prioritize: true,
         },
