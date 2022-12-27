@@ -22,7 +22,7 @@ const Projects = () => {
             category: 'Web Development',
             featured: true,
             github: 'https://github.com/dorji-tshering/flash-card',
-            hostedLink: 'https://flash-card-seven.vercel.app/',
+            hostedLink: '',
             techStacks: ['NextJs', 'Firebase', 'ReactJs'],
             prioritize: false,
         },

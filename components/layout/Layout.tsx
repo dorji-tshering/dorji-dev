@@ -59,7 +59,7 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
                 </NoticeProvider>
             </div>
         </div> 
-    );
+    )
 }
 
 export default Layout

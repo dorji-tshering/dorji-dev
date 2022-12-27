@@ -8,14 +8,12 @@ import HomeSectionSeparator from '../components/HomeSectionSeparator'
 
 export default function Home() {
     
-
     return (
         <div className="flex flex-col">
             <Head>
                 <title>Dorji &bull; Developer</title> 
                 <meta key='index' name='description' content='I am a Frontend/Wordpress developer who enjoys building the face of web applications.' />
             </Head>
-            
             {/* landing */}
             <Landing/>
             <HomeSectionSeparator header='work'/>
@@ -30,7 +28,6 @@ export default function Home() {
             <HomeSectionSeparator header='contact'/>
             {/* contact */}
             <Contact/>
-            
         </div>
     )
 }
