@@ -22,7 +22,7 @@
 
 .techStack {
     @apply mx-3 mb-8 py-[6px] px-4 text-xs tracking-wider 
-    text-center uppercase rounded-sm border border-theme/50
+    text-center uppercase rounded-sm border border-gray-600 bg-gray-700/30
 }
 
 .formInput {

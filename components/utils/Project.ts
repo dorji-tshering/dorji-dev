@@ -1,6 +1,34 @@
 const Projects = () => {
     return [
         {
+            id: 'instagram-clone',
+            title: 'Instagram Clone',
+            repoName: 'ig-clone',
+            description: 'An instagram clone where you can upload image, follow users, comment on a post and much more.',
+            features: [
+                'Select image, apply filter to it and upload with a caption.',
+                'Comment on a post.',
+                'Like or unlike a post.',
+                'Save or unsave a post.',
+                'Profile page displays your post, liked, and saved post.',
+                "View other's profile, their follower and the users they follow.",
+                'Follow or unfollow other users.',
+                'View who follows you and whom you are following from your profile page.',
+                'Like and comment counts of a post.',
+                'Real-time updates of everything you do like following, commenting, or liking a post.',
+                'Sign in with either Twitter or Google account.',
+                'Search users by their profile name.',
+                'Delete account along with all the associated data like your posts, comments, likes, and followers.',
+                'Your post is public by default and can be viewed by any signed in user.'
+            ],
+            category: 'Web Development',
+            featured: true,
+            github: 'https://github.com/dorji-tshering/ig-clone',
+            hostedLink: '',
+            techStacks: ['NextJs', 'Firebase', 'Meilisearch', 'Next-auth', 'Tailwind', 'Headlessui'],
+            prioritize: false,
+        },
+        {
             id: 'flash-card',
             title: 'Flash Card',
             repoName: 'flash-card',
@@ -20,11 +48,11 @@ const Projects = () => {
                 'Known/Unknown filter on the homepage',
             ],
             category: 'Web Development',
-            featured: true,
+            featured: false,
             github: 'https://github.com/dorji-tshering/flash-card',
             hostedLink: '',
             techStacks: ['NextJs', 'Firebase', 'ReactJs'],
-            prioritize: false,
+            prioritize: true,
         },
         {
             id: 'chit-chat',
@@ -98,7 +126,7 @@ const Projects = () => {
             github: 'https://github.com/dorji-tshering/E-Commerce-API',
             hostedLink: '',
             techStacks: ['NestJs', 'TypeORM', 'MySQL'],
-            prioritize: true,
+            prioritize: false,
         },
     ]
 }

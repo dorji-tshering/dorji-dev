@@ -38,14 +38,14 @@ const Work = () => {
             <h1 className="text-center text-myYellow/90 ubuntu text-xl font-bold mb-10">A list of my projects that I have done over the years.</h1>
             {/* Featured Project */}
             <section>
-                <h4 className={` text-center text-theme/80 font-[600] text-xs mb-10 tracking-wide`}>
+                <h4 className={` text-center text-theme font-[600] text-xs mb-10 tracking-wide`}>
                     FEATURED PROJECT
                 </h4>
                 <motion.div
-                    whileHover={{scale: 1.05}}
+                    whileHover={{y: -5}}
                     transition={{duration: .1}}
-                    className="relative rounded group border bg-theme/5 border-theme max-w-[450px] transition-all
-                    mx-auto p-6 overflow-hidden shadow-sm">
+                    className="relative group border-b-2 border-b-gray-600 shadow-md rounded bg-gray-700/40 max-w-[450px] transition-all
+                    mx-auto p-6 overflow-hidden">
                     <div className="flex justify-between mb-5">
                         <h4 className="my-0 font-[500]">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
