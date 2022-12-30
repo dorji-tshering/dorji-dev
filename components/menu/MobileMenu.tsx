@@ -60,7 +60,7 @@ const MobileMenu = ({ open, cycleOpen }: Props) => {
                                 transition: { delay: .4, duration: 0.1 }
                             }}
                             onClick={() => {cycleOpen()}}
-                            className='fixed z-[100] h-full md:hidden bg-mainBg/50 backdrop-blur-sm'>
+                            className='fixed z-[100] h-full md:hidden bg-theme/80 backdrop-blur-sm'>
                             <motion.aside 
                                 className='absolute left-0 top-0 h-full pb-10 overflow-y-auto flex flex-col 
                                 w-48 scrollbar-hide bg-mainBg shadow-md shadow-gray-800'
