@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import { motion } from 'framer-motion'
 import isMobile from '../utils/isMobile'
 
 const About = () => {
-    const isMb = isMobile()
 
     return (
         <div className="homeSectionContainer">
@@ -17,7 +15,7 @@ const About = () => {
                     height={200}
                 />
                 <div className="relative">
-                    <p className="pt-[110px] px-6 pb-7 sm:px-10 sm:pb-9
+                    <p className="pt-[110px] bg-theme/5 rounded-md px-6 pb-7 sm:px-10 sm:pb-9
                         relative -top-20 max-w-2xl text-center z-10">
                         I am a college dropout and hence a self-taught developer. I started learning
                         web development at the start of 2020. Prior to that, I have had a little bit of experience
@@ -26,20 +24,6 @@ const About = () => {
                         via personal projects mostly and a few client projects. However, as time went by, I have 
                         committed myself fully to the Frontend aspect of web development which I truly enjoy. 
                     </p>
-                    <motion.div 
-                        initial={{y: isMb ? -20 : -30,}}
-                        whileInView={{y: 0, rotate: -1}}
-                        viewport={{once: false, margin: "-200px 0px"}}
-                        transition={{duration: 2}}
-                        className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
-                        rounded-xl border-b border-theme/90'></motion.div>
-                    <motion.div 
-                        initial={{y: isMb ? 20 : 30,}}
-                        whileInView={{y: 0, rotate: 1}}
-                        viewport={{once: false, margin: "100px"}}
-                        transition={{duration: 2}}
-                        className='absolute h-full bg-theme/5 -top-20 bottom-0 left-0 right-0 
-                        rounded-xl border-b border-theme/90'></motion.div>
                 </div>
             </div>
         </div>

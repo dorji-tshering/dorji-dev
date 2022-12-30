@@ -22,7 +22,7 @@
 
 .techStack {
     @apply mx-3 mb-8 py-[6px] px-4 text-xs tracking-wider 
-    text-center uppercase rounded-sm border border-gray-600 bg-gray-700/30
+    text-center uppercase rounded-sm bg-gray-700/30
 }
 
 .formInput {
@@ -69,7 +69,7 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 15px;
     min-height: 100%;
     color: white;
     background-color: #000;
