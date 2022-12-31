@@ -72,7 +72,7 @@ const ContactForm = () => {
             <button
                 disabled={isLoading ? true : false}
                 className={`w-full flex items-center justify-center mt-5 py-5 border-t border-b hover:text-white border-t-theme border-b-theme 
-                    !bg-theme/10 text-xs tracking-[2px] hover:!bg-theme hover:rounded-md
+                    !bg-theme/10 text-xs tracking-[2px] hover:!bg-theme hover:rounded-md font-[600]
                     transition-all duration-500 ${isLoading ? 'cursor-not-allowed' : ''}`} 
                 type="submit">
                     SEND MESSAGE

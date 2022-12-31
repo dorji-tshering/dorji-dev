@@ -79,7 +79,7 @@ const Work = () => {
                     ))
                 }
             </motion.section>
-            <Link className="text-theme block mx-auto w-fit mt-10 px-4 py-2 rounded-md font-[500]
+            <Link className="text-theme block mx-auto w-fit mt-10 px-4 py-1 rounded-md font-[600]
               hover:bg-theme/10 transition-all duration-300 ease-out" href="/projects">View all projects
             </Link>
         </div>
