@@ -14,16 +14,16 @@ const about = () => {
                 <meta name='description' content='I am a self-taught Frontend/Wordpress developer. My tech stacks include mostly of React and Next.'/>
             </Head>
             <div className="relative">
-                <h1 className="mb-12 text-2xl ubuntu font-[600] pr-11 text-myCyan/90">A little extra about myself</h1>
+                <h1 className="mb-12 text-2xl ubuntu font-[600] pr-11 dark:text-myCyan/90">A little extra about myself</h1>
                 <button 
-                    className="absolute right-0 top-[6px] text-xl text-gray-300 h-8
+                    className="absolute right-0 top-[6px] text-xl  dark:text-gray-300 h-8
                         w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg
-                        hover:bg-gray-700 transition-all duration-300"
+                        hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-300"
                     onClick={() => router.back()}><IoMdArrowBack /></button>
             </div>
             <div className="flex flex-col-reverse lg:flex-row">
                 <section className="px-6 py-10 sm:p-10 flex justify-center
-                    items-center lg:w-[70%] lg:mr-12 overflow-hidden border-t border-b border-gray-700">
+                    items-center lg:w-[70%] lg:mr-12 overflow-hidden border-t border-b border-gray-300 dark:border-gray-700">
                     <div>
                         <p className="mb-6">
                             As for the programming languages, I have made myself familiar with C, Java, Python, Javascript, and Typescript. 
@@ -32,7 +32,7 @@ const about = () => {
                         </p>
                         <p className="mb-6">
                             I have built a fully featured e-commerce website using Wordpress/Woocommerce for a client which you can 
-                            visit <a className="text-gray-400 underline underline-offset-2 decoration-dotted hover:text-theme transition-all duration-500" target="_blank" href="https://tuo.shopping">here</a>. 
+                            visit <a className="text-gray-500 dark:text-gray-400 underline underline-offset-2 decoration-dotted hover:text-theme transition-all duration-500" target="_blank" href="https://tuo.shopping">here</a>. 
                             Now I am fully confident that I can build any 
                             production-ready website with Wordpress to the customization of the client.
                         </p>

@@ -35,7 +35,7 @@ const Work = () => {
 
     return (
         <div className="homeSectionContainer">
-            <h1 className="text-center text-myYellow/90 ubuntu text-xl font-bold mb-10">A list of my projects that I have done over the years.</h1>
+            <h1 className="text-center text-[#222] dark:text-myYellow ubuntu text-xl font-bold mb-10">A list of my projects that I have done over the years.</h1>
             {/* Featured Project */}
             <section>
                 <h4 className={` text-center text-theme font-[600] text-xs mb-10 tracking-wide`}>
@@ -44,26 +44,27 @@ const Work = () => {
                 <motion.div
                     whileHover={{y: -5}}
                     transition={{duration: .1}}
-                    className="relative group border-b-2 border-b-gray-600 shadow-md rounded bg-gray-700/40 max-w-[450px] transition-all
+                    className="relative group dark:border-b-2 dark:border-b-gray-600 dark:shadow-md rounded
+                    shadow-mainShadow dark:bg-gray-700/40 max-w-[450px] transition-all
                     mx-auto p-6 overflow-hidden">
                     <div className="flex justify-between mb-5">
-                        <h4 className="my-0 font-[500]">{ featuredProject.title }</h4>
+                        <h4 className="my-0 font-[600]">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
                         </Link>
                     </div>
-                    <p className="text-gray-300 line-clamp-2">{ featuredProject.description }</p>
+                    <p className="dark:text-gray-300 line-clamp-2">{ featuredProject.description }</p>
                     <div className="flex justify-between mt-6">
                         <p className="text-gray-400 text-sm">{ featuredProject.category }</p>
-                        <Link className="text-gray-500 text-sm transition-all group-hover:text-theme" href={featuredProject.github}>Github</Link>
+                        <Link className="text-gray-500 transition-all group-hover:text-theme" href={featuredProject.github}>Github</Link>
                     </div>
-                    <GoPrimitiveDot className="absolute top-1 left-1 text-gray-600"/>
-                    <GoPrimitiveDot className="absolute top-1 right-1 text-gray-600"/>
-                    <GoPrimitiveDot className="absolute bottom-1 right-1 text-gray-600"/>
-                    <GoPrimitiveDot className="absolute bottom-1 left-1 text-gray-600"/>
+                    <GoPrimitiveDot className="absolute top-1 left-1 text-gray-400 dark:text-gray-600"/>
+                    <GoPrimitiveDot className="absolute top-1 right-1 text-gray-400 dark:text-gray-600"/>
+                    <GoPrimitiveDot className="absolute bottom-1 right-1 text-gray-400 dark:text-gray-600"/>
+                    <GoPrimitiveDot className="absolute bottom-1 left-1 text-gray-400 dark:text-gray-600"/>
                 </motion.div>
             </section>
             <span className="block h-[1px] w-[80%] my-16 mb-14 mx-auto
-                bg-gradient-to-r from-black via-gray-700 to-black">
+                bg-gray-200 dark:bg-gradient-to-r from-black via-gray-700 to-black">
             </span>
             {/* Prioritized Projects */}
             <motion.section

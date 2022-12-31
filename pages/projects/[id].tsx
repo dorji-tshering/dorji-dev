@@ -57,17 +57,17 @@ const ProjectDetails = () => {
                 <>
                     <section>
                         <div className="flex items-center flex-wrap relative pr-11">
-                            <h1 className="mb-4 text-xl ubuntu md:text-2xl mr-6 font-[600] text-white">{project.title}</h1>
-                            <p className="mb-4 text-xs bg-theme/70 px-3 py-1 rounded-sm">{project.category}</p>
+                            <h1 className="mb-4 text-xl ubuntu md:text-2xl mr-6 font-[600] dark:text-white">{project.title}</h1>
+                            <p className="mb-4 text-xs bg-theme px-3 py-1 text-white rounded-sm">{project.category}</p>
                             <button 
-                                className="absolute right-0 top-0 text-xl text-gray-300 h-8
+                                className="absolute right-0 top-0 text-xl dark:text-gray-300 h-8
                                     w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full bg-lightBg
-                                  hover:bg-gray-700 transition-all duration-300"
+                                    hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-300"
                                 onClick={() => router.back()}><IoMdArrowBack /></button>
                         </div>
                         <div className="flex mb-5 text-sm">
                             <Link 
-                                className="flex items-center mr-6 text-gray-400 hover:text-theme 
+                                className="flex items-center mr-6 text-gray-500 dark:text-gray-400 hover:text-theme 
                                     transition-all duration-300 ease-out" 
                                 href={project.github}
                                 target="_blank">
@@ -86,21 +86,21 @@ const ProjectDetails = () => {
                             {
                                 project.techStacks.map((stack, idx) => (
                                     <p 
-                                        className="text-sm text-gray-200 mb-4 mr-4 border border-solid border-gray-600 rounded
+                                        className="text-sm dark:text-gray-200 mb-4 mr-4 border bg-gray-100 dark:bg-transparent dark:border-gray-600 rounded
                                             px-2 py-[2px]" 
                                         key={idx}>{stack}</p>
                                 ))
                             }
                         </div>
                         <div className="mb-10">
-                            <h3 className="text-xl mb-3 text-gray-400 font-[500]">Description</h3>
+                            <h3 className="text-xl mb-3 text-black dark:text-gray-400 font-[700]">Description</h3>
                             <p className="leading-6">{project.description}</p>
                         </div>
                         {
                             project.features.length > 0 
                             && 
                             <div className="mb-10">
-                                <h3 className="text-xl text-gray-400 mb-3 font-[500]">Features</h3>
+                                <h3 className="text-xl text-black dark:text-gray-400 mb-3 font-[700]">Features</h3>
                                 <ul className="leading-7">
                                     {
                                         project.features.map((feature, idx) => 
@@ -119,14 +119,14 @@ const ProjectDetails = () => {
                         {
                             languagePer.length > 0 ?
                             <>
-                                <h3 className="text-xl mb-3 text-gray-400 font-[500]">Languages</h3>
+                                <h3 className="text-xl mb-3 text-black dark:text-gray-400 font-[700]">Languages</h3>
                                 <div className="flex flex-wrap">
                                     {
                                         languagePer.map((lang, idx) => (
                                             <p 
                                                 className="flex items-center mr-3 text-sm mb-3"
                                                 key={idx}><GoPrimitiveDot className="mr-2" color={colors[idx]}/>
-                                                    <span className="font-[400] text-gray-100">{lang.name}</span> <span className="ml-2 text-gray-300">{lang.percentage}%</span>
+                                                    <span className="dark:text-gray-100">{lang.name}</span> <span className="ml-2 font-[600] text-black dark:text-gray-400">{lang.percentage}%</span>
                                             </p>
                                         ))
                                     }

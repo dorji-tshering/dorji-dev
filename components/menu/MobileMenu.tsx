@@ -60,14 +60,14 @@ const MobileMenu = ({ open, cycleOpen }: Props) => {
                                 transition: { delay: .4, duration: 0.1 }
                             }}
                             onClick={() => {cycleOpen()}}
-                            className='fixed z-[100] h-full md:hidden bg-theme/80 backdrop-blur-sm'>
+                            className='fixed z-[100] h-full md:hidden bg-theme/20 dark:bg-theme/80 backdrop-blur-sm'>
                             <motion.aside 
                                 className='absolute left-0 top-0 h-full pb-10 overflow-y-auto flex flex-col 
-                                w-48 scrollbar-hide bg-mainBg shadow-md shadow-gray-800'
+                                w-48 scrollbar-hide bg-[#FDFFFF] dark:bg-mainBg shadow-md shadow-gray-300 dark:shadow-gray-800'
                                 onClick={(ev) => ev.stopPropagation()}>
         
                                 {/* logo */}
-                                <div className="px-7 py-7 text-center shadow-sm shadow-black">
+                                <div className="px-7 py-7 text-center shadow-sm shadow-gray-300 dark:shadow-black">
                                     <Link onClick={() => cycleOpen()} className="text-[18px] mt-1 font-[600] ubuntu" href='/'>
                                         <span className="text-theme">Dorji</span> <span>Tshering</span>
                                     </Link>
@@ -92,7 +92,7 @@ const MobileMenu = ({ open, cycleOpen }: Props) => {
                                                     <Link 
                                                         href={link.to}
                                                         onClick={() => cycleOpen()}
-                                                        className="menuLink">{link.name}
+                                                        className="py-4 w-full block relative font-[500] hover:text-black dark:hover:text-white">{link.name}
                                                     </Link>
                                                     <motion.span variants={itemVariants} className='menuSeparator'></motion.span>
                                                 </motion.div>

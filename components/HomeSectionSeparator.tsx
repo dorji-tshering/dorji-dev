@@ -62,11 +62,11 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
             <motion.span 
                 variants={itemVertical}
                 className={classNames(
-                    'w-[3px] bg-gradient-to-b rounded',
-                    header === 'work' && 'from-theme to-myYellow/60',
-                    header === 'about' && 'from-myYellow to-myCyan/60',
-                    header === 'stack' && 'from-myCyan to-myRed/60',
-                    header === 'contact' && 'from-myRed to-myGreen/60'
+                    'w-[3px] bg-slate-400 dark:bg-gradient-to-b rounded',
+                    header === 'work' && 'dark:from-theme to-myYellow/60',
+                    header === 'about' && 'dark:from-myYellow to-myCyan/60',
+                    header === 'stack' && 'dark:from-myCyan to-myRed/60',
+                    header === 'contact' && 'dark:from-myRed to-myGreen/60'
                 )}
             />
             <div 
@@ -74,17 +74,17 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
                 <motion.span
                     variants={itemHorizontal}
                     className={classNames(
-                        'h-[1px] bg-gray-700 block',
+                        'h-[1px] bg-gray-200 dark:bg-gray-700 block',
                     )}
                 />
                 <motion.span
                     variants={headerVariant}
                     className={classNames(
-                        'block w-fit whitespace-nowrap text-slate-300 font-bold mx-2',
-                        header === 'work' && 'drop-shadow-workGlow',
-                        header === 'about' && 'drop-shadow-aboutGlow',
-                        header === 'stack' && 'drop-shadow-stackGlow',
-                        header === 'contact' && 'drop-shadow-contactGlow'
+                        'block w-fit whitespace-nowrap text-black/75 dark:text-slate-300 font-bold mx-2',
+                        header === 'work' && 'dark:drop-shadow-workGlow',
+                        header === 'about' && 'dark:drop-shadow-aboutGlow',
+                        header === 'stack' && 'dark:drop-shadow-stackGlow',
+                        header === 'contact' && 'dark:drop-shadow-contactGlow'
                     )}>
                     {
                         header === 'work' && 'MY WORK' ||
@@ -96,7 +96,7 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
                 <motion.span
                     variants={itemHorizontal}
                     className={classNames(
-                        'h-[1px] bg-gray-700 block',
+                        'h-[1px] bg-gray-200 dark:bg-gray-700 block',
                     )}
                 />
             </div>
@@ -104,11 +104,11 @@ const HomeSectionSeparator = ({header}: {header: string}) => {
             <motion.span
                 variants={itemVertical}
                 className={classNames(
-                    'w-[3px] rounded bg-gradient-to-b',
-                    header === 'work' && 'from-myYellow via-myYellow/50',
-                    header === 'about' && 'from-myCyan via-myCyan/50',
-                    header === 'stack' && 'from-myRed via-myRed/50',
-                    header === 'contact' && 'from-myGreen via-myGreen/50'
+                    'w-[3px] rounded bg-gradient-to-b from-slate-500 to-white',
+                    header === 'work' && 'dark:from-myYellow dark:via-myYellow/50',
+                    header === 'about' && 'dark:from-myCyan dark:via-myCyan/50',
+                    header === 'stack' && 'dark:from-myRed dark:via-myRed/50',
+                    header === 'contact' && 'dark:from-myGreen dark:via-myGreen/50'
                 )}
             />
         </motion.div>

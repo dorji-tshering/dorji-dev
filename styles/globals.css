@@ -2,12 +2,8 @@
 @import 'tailwindcss/utilities'; 
 @import 'tailwindcss/base';
 
-.menuLink {
-    @apply py-4 w-full block relative
-}
-
 .menuSeparator {
-    @apply h-[1px] bg-gradient-to-r from-[#111] via-theme/60 to-[#111] block
+    @apply h-[1px] bg-gray-200 dark:bg-transparent dark:bg-gradient-to-r dark:from-[#111] dark:via-theme/60 dark:to-[#111] block
 }
 
 .socialLink {
@@ -20,15 +16,10 @@
     md:first:mt-5 md:mx-5
 }
 
-.techStack {
-    @apply mx-3 mb-8 py-[6px] px-4 text-xs tracking-wider 
-    text-center uppercase rounded-sm bg-gray-700/30
-}
-
 .formInput {
-    @apply bg-gray-700/10 my-3 focus:ring-theme/20 focus:bg-transparent
-    focus:ring-[3px] focus:border-theme text-gray-100
-    border-gray-700 text-[15px]
+    @apply dark:bg-gray-700/10 my-3 focus:ring-theme/20 focus:bg-transparent
+    focus:ring-[3px] border-gray-300 focus:border-theme dark:focus:border-theme dark:text-gray-100
+    dark:border-gray-700 text-[15px]
 }
 
 .pageContainer {
@@ -37,11 +28,11 @@
 }
 
 .rippleStyle {
-    @apply absolute rounded-full scale-0 animate-rippleAnimation bg-gray-700
+    @apply absolute rounded-full scale-0 animate-rippleAnimation bg-gray-200 dark:bg-gray-700
 }
 
 .ubuntu {
-    font-family: 'ubuntu';
+    font-family: 'Lexend';
 }
 
 /* change autofill background for chrome */
@@ -63,17 +54,13 @@ select:-webkit-autofill:focus {
 
 /* base styles */
 html {
-    font-family: 'Figtree', sans-serif;
-    font-weight: 300;
+    font-family: 'Urbanist', sans-serif;
     height: 100%;
 }
 
 body {
-    font-size: 15px;
-    min-height: 100%;
-    color: white;
-    background-color: #000;
-    word-spacing: 1px;
+    @apply text-[15px] sm:text-[16px] font-[500] min-h-full text-[#334155] bg-[#FDFFFF] dark:text-white dark:bg-mainBg antialiased
+    tracking-wide
 }
 
 body, p, li, ul {

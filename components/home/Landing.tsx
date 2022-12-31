@@ -13,11 +13,10 @@ const Landing = () => {
             <h4 className="text-xs md:text-sm md:tracking-widest font-['mali']">
                 <DelayChar text='FRONTEND / WORDPRESS DEVELOPER' staggerChild={.04}/>
             </h4>
-            <p className="hidden md:block absolute top-6 right-10 text-xs text-gray-400">Be Curious</p>
             <div className='mt-20'>
                 <img src="/images/programmer.svg" 
                     alt="programmer" 
-                    className='w-[200px] md:w-[300px] drop-shadow-svgGlow'/>
+                    className='w-[200px] md:w-[300px] dark:drop-shadow-svgGlow'/>
             </div>
             <a className="text-sm mt-10 font-[500]"
                 href="https://github.com/dorji-tshering/ig-clone" 

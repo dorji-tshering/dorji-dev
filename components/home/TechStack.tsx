@@ -28,7 +28,7 @@ const techStack = ['HTML', 'CSS', 'Javascript', 'Typescript', 'ReactJS', 'NextJs
 const TechStack = () => {
     return (
         <div className="homeSectionContainer">
-            <h1 className="mb-10 text-center font-bold text-xl text-myRed/90
+            <h1 className="mb-10 text-center font-bold text-xl text-[#222] dark:text-myRed/90
                 ubuntu">
                 Languages, frameworks, libraries, and technologies  I have experience with.
             </h1>
@@ -43,7 +43,8 @@ const TechStack = () => {
                         <motion.div 
                             variants={item}
                             key={idx} 
-                            className="techStack">{tech}</motion.div>
+                            className="mx-3 mb-8 py-[6px] px-4 text-sm tracking-wider text-slate-600 dark:text-slate-200
+                            text-center rounded-sm bg-theme/10 dark:bg-gray-700/30">{tech}</motion.div>
                     ))
                 }
             </motion.div>

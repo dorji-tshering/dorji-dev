@@ -4,6 +4,7 @@ import { GrTwitter } from 'react-icons/gr';
 import { BsGithub } from 'react-icons/bs';
 import rippleEffect from '../utils/RippleEffect';
 import { useEffect } from 'react';
+import ThemeToggle from '../ThemeToggle';
 
 const links = [
     { name: "Home", to: "/", id: 1 },
@@ -20,14 +21,13 @@ const DesktopSidebar = () => {
     }, []); 
 
     return (
-        <div className="hidden bg-mainBg overflow-y-auto md:flex md:flex-col md:w-48 lg:w-56
-            shadow-md shadow-[#444]">
+        <div className="hidden overflow-y-auto md:flex md:flex-col md:w-48 lg:w-56">
             {/* logo */}
             <div className="px-7 py-7 text-center">
                 <Link className="text-[18px] mt-1 font-[600] ubuntu" href='/'>
                     <span className="text-theme">Dorji</span> <span>Tshering</span>
                 </Link>
-                <p className="font-[mali] text-xs mt-1">web developer</p>
+                <p className="font-[mali] text-gray-400 font-[600] text-xs mt-1">web developer</p>
                 <DiCode className="mx-auto" size={28} color="#989797"/>
             </div>
             {/* menu link */}
@@ -36,15 +36,15 @@ const DesktopSidebar = () => {
                     <span className='menuSeparator'></span>
                     {
                         links.map(link => (
-                                <div
-                                key={link.id} 
-                                className="ripple relative overflow-hidden">
-                                    <Link 
-                                        href={link.to}
-                                        className="menuLink">{link.name}
-                                    </Link>
-                                    <span className='menuSeparator'></span>
-                                </div>
+                            <div
+                            key={link.id} 
+                            className="ripple relative overflow-hidden">
+                                <Link 
+                                    href={link.to}
+                                    className="py-4 w-full block relative font-[500] hover:text-black dark:hover:text-white">{link.name}
+                                </Link>
+                                <span className='menuSeparator'></span>
+                            </div>
                         ))
                     }
                 </div>
@@ -57,8 +57,10 @@ const DesktopSidebar = () => {
                         <BsGithub size={24}/>
                     </Link>
                 </div>
+                <div className='hidden md:flex justify-center'>
+                    <ThemeToggle/>
+                </div>
             </div>
-            
         </div>
     )
 }

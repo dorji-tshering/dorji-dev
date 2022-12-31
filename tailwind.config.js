@@ -5,6 +5,7 @@ module.exports = {
       "./pages/**/*.{js,ts,jsx,tsx}",
       "./components/**/*.{js,ts,jsx,tsx}",
     ],
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
@@ -20,6 +21,7 @@ module.exports = {
             },
             boxShadow: {
                 nailShadow: "0px 0px 22px 9px #016DF9",
+                mainShadow: "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px"
             },
             dropShadow: {
                 svgGlow: '0px 0px 30px #3889f4',

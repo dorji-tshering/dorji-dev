@@ -42,7 +42,7 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
             <MobileHeader onMenuClick={() => cycleOpen()}/>
             <DesktopSidebar/>
             <MobileMenu open={open} cycleOpen={cycleOpen}/>
-            <div className="overflow-y-auto flex flex-col justify-between min-h-screen relative flex-1 bg-mainBg border-l border-l-gray-700" 
+            <div className="overflow-y-auto flex flex-col justify-between min-h-screen relative flex-1 border-l dark:border-l-gray-700" 
                 ref={ref}>
                 <NoticeProvider value={contextValue}>
                     { 
