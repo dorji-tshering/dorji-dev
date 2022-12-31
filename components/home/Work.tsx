@@ -35,20 +35,19 @@ const Work = () => {
 
     return (
         <div className="homeSectionContainer">
-            <h1 className="text-center text-[#222] dark:text-myYellow ubuntu text-xl font-bold mb-10">A list of my projects that I have done over the years.</h1>
+            <h1 className="text-center text-[#222] dark:text-myYellow lexend text-xl md:text-2xl tracking-normal font-[300] mb-10">A list of my projects that I have done over the years.</h1>
             {/* Featured Project */}
             <section>
                 <h4 className={` text-center text-theme font-[600] text-xs mb-10 tracking-wide`}>
                     FEATURED PROJECT
                 </h4>
                 <motion.div
-                    whileHover={{y: -5}}
-                    transition={{duration: .1}}
                     className="relative group dark:border-b-2 dark:border-b-gray-600 dark:shadow-md rounded
-                    shadow-mainShadow dark:bg-gray-700/40 max-w-[450px] transition-all
+                    shadow-borderedShadow dark:bg-gray-700/40 max-w-[450px] transition-all bg-lightRadialGradient
+                    dark:bg-darkRadialGradient
                     mx-auto p-6 overflow-hidden">
                     <div className="flex justify-between mb-5">
-                        <h4 className="my-0 font-[600]">{ featuredProject.title }</h4>
+                        <h4 className="my-0 lexend tracking-normal">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
                         </Link>
                     </div>

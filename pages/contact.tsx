@@ -13,7 +13,7 @@ const contact = () => {
                 <meta name='description' content='If you want to discuss any frontend or wordpress projects, you can contact me at the click of a button.' />
             </Head>
             <div className="relative">
-                <h3 className="mb-12 ubuntu text-2xl font-[600] dark:text-myGreen/90">Contact Me</h3>
+                <h3 className="mb-12 lexend text-xl md:text-2xl tracking-normal font-[300] dark:text-myGreen/90">Contact Me</h3>
                 <button 
                     className="absolute right-0 top-[6px] text-xl dark:text-gray-300 h-8
                         w-8 md:h-10 md:w-10 flex justify-center items-center rounded-full

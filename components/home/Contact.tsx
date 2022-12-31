@@ -4,7 +4,7 @@ const Contact = () => {
     
     return (
         <div className="homeSectionContainer">
-            <h1 className="text-xl ubuntu text-[#222] dark:text-myGreen/90 font-bold text-center mb-10">I love being reached out!</h1>
+            <h1 className="lexend text-[#222] dark:text-myGreen/90 text-xl md:text-2xl tracking-normal font-[300] text-center mb-10">I love being reached out!</h1>
             <section className="flex flex-col md:flex-col lg:flex-row justify-between">
                 <div className="sm:w-[40%] md:w-[100%] lg:w-[40%]">
                     <p className="text-center lg:text-left lg:mr-5">I am interested in frontend and wordpress projects. If you you want to 

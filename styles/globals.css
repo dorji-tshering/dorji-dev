@@ -18,7 +18,7 @@
 
 .formInput {
     @apply bg-transparent dark:bg-gray-700/10 my-3 focus:ring-theme/20 focus:bg-transparent
-    focus:ring-[3px] border-gray-300 focus:border-theme dark:focus:border-theme dark:text-gray-100
+    focus:ring-[3px] border-gray-200 focus:border-theme dark:focus:border-theme dark:text-gray-100
     dark:border-gray-700 text-[15px]
 }
 
@@ -31,7 +31,7 @@
     @apply absolute rounded-full scale-0 animate-rippleAnimation bg-gray-200 dark:bg-gray-700
 }
 
-.ubuntu {
+.lexend {
     font-family: 'Lexend';
 }
 
@@ -51,16 +51,15 @@ select:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-
 /* base styles */
 html {
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     height: 100%;
 }
 
 body {
-    @apply text-[14px] md:text-[15px] font-[500] min-h-full text-[#334155] bg-[#FDFFFF] dark:text-white dark:bg-mainBg antialiased
-    tracking-wide
+    @apply text-[14px] md:text-[15px] leading-[1.65] min-h-full text-[#334155] bg-[#FDFFFF] dark:text-white dark:bg-mainBg 
+    tracking-[.4px]
 }
 
 body, p, li, ul {

@@ -16,12 +16,17 @@ module.exports = {
                 'myCyan': '#7efbfd',
                 'myGreen': '#62f4ab'
             },
+            backgroundImage: {
+                lightRadialGradient: 'radial-gradient( circle at 50%, #0141ff1f 0px, #00000000 )',
+                darkRadialGradient: 'radial-gradient( circle at center, #fc00cb29, #0000000f)',
+            },
             screens: {
                 xs: '481px'
             },
             boxShadow: {
                 nailShadow: "0px 0px 22px 9px #016DF9",
-                mainShadow: "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px"
+                mainShadow: "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px",
+                borderedShadow: "0 0 0 1px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 5%), 0 12px 24px rgb(0 0 0 / 5%)"
             },
             dropShadow: {
                 svgGlow: '0px 0px 30px #3889f4',
