@@ -86,7 +86,8 @@ const ProjectDetails = () => {
                             {
                                 project.techStacks.map((stack, idx) => (
                                     <p 
-                                        className="text-sm dark:text-gray-200 mb-4 mr-4 border bg-gray-100 dark:bg-transparent dark:border-gray-600 rounded
+                                        className="text-sm dark:text-gray-200 mb-4 mr-4 border text-gray-500 bg-gray-100/30 dark:bg-gray-700/20
+                                            dark:border-gray-600/50 rounded
                                             px-2 py-[2px]" 
                                         key={idx}>{stack}</p>
                                 ))

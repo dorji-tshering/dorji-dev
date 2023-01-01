@@ -12,8 +12,7 @@
 }
 
 .homeSectionContainer {
-    @apply xs:px-4 py-10 sm:px-10 mx-3 mb-5 first:mt-[80px] 
-    md:first:mt-5 md:mx-5
+    @apply xs:px-4 py-10 sm:px-10 mx-3 mb-5 md:mx-5
 }
 
 .formInput {
@@ -58,7 +57,7 @@ html {
 }
 
 body {
-    @apply text-[14px] md:text-[15px] leading-[1.65] min-h-full text-[#334155] bg-[#FDFFFF] dark:text-white dark:bg-mainBg 
+    @apply text-[14px] md:text-[15px] leading-[1.65] min-h-full text-[#334155] bg-[#FDFFFF] dark:text-[#8b949e] dark:bg-mainBg 
     tracking-[.4px]
 }
 

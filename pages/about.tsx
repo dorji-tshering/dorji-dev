@@ -31,8 +31,8 @@ const about = () => {
                             Typescript with either ReactJs or NextJs.
                         </p>
                         <p className="mb-6">
-                            I have built a fully featured e-commerce website using Wordpress/Woocommerce for a client which you can 
-                            visit <a className="text-gray-500 dark:text-gray-400 underline underline-offset-2 decoration-dotted hover:text-theme transition-all duration-500" target="_blank" href="https://tuo.shopping">here</a>. 
+                            I have also built a fully featured <a className="text-theme" target="_blank" href="http://https://tuo.shopping">e-commerce website</a> using 
+                            Wordpress and Woocommerce.
                             Now I am fully confident that I can build any 
                             production-ready website with Wordpress to the customization of the client.
                         </p>
@@ -47,7 +47,7 @@ const about = () => {
                 <section className="lg:w-[30%] mb-10 lg:mb-0 lg:flex lg:items-center">
                     <div className="relative w-full max-w-[200px] lg:max-w-[300px] aspect-square">
                         <Image 
-                            className="object-cover rounded-full p-[2px] border border-solid border-gray-400"
+                            className="object-cover rounded-full p-[2px] grayscale border border-gray-200 dark:border-gray-700"
                             src="/images/dorji.jpg" 
                             alt="Image of Dorji Tshering"
                             fill

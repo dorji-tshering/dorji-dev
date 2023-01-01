@@ -42,12 +42,14 @@ const Work = () => {
                     FEATURED PROJECT
                 </h4>
                 <motion.div
-                    className="relative group dark:border-b-2 dark:border-b-gray-600 dark:shadow-md rounded
+                    className="relative group dark:shadow-md rounded after:content-[''] after:h-[2px] after:block 
+                    after:bg-red-300 after:absolute after:bottom-0 after:w-full after:mx-auto after:left-0
+                    after:bg-lightFeaturedBg dark:after:bg-darkFeaturedBg
                     shadow-borderedShadow dark:bg-gray-700/40 max-w-[450px] transition-all bg-lightRadialGradient
                     dark:bg-darkRadialGradient
                     mx-auto p-6 overflow-hidden">
                     <div className="flex justify-between mb-5">
-                        <h4 className="my-0 lexend tracking-normal">{ featuredProject.title }</h4>
+                        <h4 className="my-0 lexend tracking-normal text-white">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
                         </Link>
                     </div>
@@ -78,8 +80,8 @@ const Work = () => {
                     ))
                 }
             </motion.section>
-            <Link className="text-theme block mx-auto w-fit mt-10 px-4 py-1 rounded-md font-[600]
-              hover:bg-theme/10 transition-all duration-300 ease-out" href="/projects">View all projects
+            <Link className="text-white block mx-auto w-fit mt-10 px-5 border border-theme py-2 rounded-md font-[500]
+                bg-theme hover:bg-white hover:text-theme transition-all duration-300 ease-out" href="/projects">View all
             </Link>
         </div>
     )

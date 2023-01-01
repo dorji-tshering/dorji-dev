@@ -11,8 +11,8 @@ const Contact = () => {
                         discuss about the project or other things for that matter, feel free to reach me via this form. 
                     </p>
                     <address className="mt-10 mb-6 sm:mb-0 md:mb-6 lg:mb-0 flex justify-center sm:block sm:text-[15px] md:flex lg:block text-xs not-italic">
-                        <p className="text-gray-500 dark:text-gray-400 mx-2 mb-4 sm:mx-0 md:mx-3 lg:mx-0">+975-77640414</p>
-                        <p className="text-gray-500 dark:text-gray-400 mx-2 sm:mx-0 md:mx-3 lg:mx-0">Phuentsholing, Chukha, Bhutan</p>
+                        <p className="text-gray-500 mx-2 text-xs mb-2 sm:mx-0 md:mx-3 lg:mx-0">+975-77640414</p>
+                        <p className="text-gray-500 mx-2 text-xs sm:mx-0 md:mx-3 lg:mx-0">Phuentsholing, Chukha, Bhutan</p>
                     </address>
                 </div>
                 <ContactForm/>
