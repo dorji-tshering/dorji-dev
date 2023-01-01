@@ -21,7 +21,7 @@ module.exports = {
                 darkRadialGradient: 'radial-gradient( circle at center, #fc00cb0d, #0000000f)',
                 lightFeaturedBg: 'linear-gradient(90deg, #f9f9f9 7%, rgba(56,230,244,1) 32%, rgba(56,136,244,1) 54%, rgba(244,56,215,1) 72%, #f9f9f9 92%)',
                 darkFeaturedBg: 'linear-gradient(90deg, #222222 7%, rgba(56,230,244,1) 32%, rgba(56,136,244,1) 54%, rgba(244,56,215,1) 72%, #222222 92%)',
-                landingBg: 'linear-gradient(0deg, rgba(17,17,17,1) 53%, rgba(63,94,251,1) 100%)'
+                landingBg: 'linear-gradient(0deg, rgba(17,17,17,1) 74%, rgba(63,94,251,1) 100%)'
             },
             screens: {
                 xs: '481px'

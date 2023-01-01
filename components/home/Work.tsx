@@ -49,7 +49,7 @@ const Work = () => {
                     dark:bg-darkRadialGradient
                     mx-auto p-6 overflow-hidden">
                     <div className="flex justify-between mb-5">
-                        <h4 className="my-0 lexend tracking-normal text-white">{ featuredProject.title }</h4>
+                        <h4 className="my-0 lexend tracking-normal dark:text-white">{ featuredProject.title }</h4>
                         <Link className="text-gray-500 group-hover:text-theme" href={`/projects/${featuredProject.id}`}>View
                         </Link>
                     </div>
