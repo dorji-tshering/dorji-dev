@@ -20,12 +20,7 @@ const About = () => {
                         dark:bg-gray-700/20 rounded-lg px-6 pb-7 sm:px-10 sm:pb-9
                         dark:shadow-theme/10
                         relative -top-20 max-w-2xl text-center z-10">
-                        I am a college dropout and hence a self-taught developer. I started learning
-                        web development at the start of 2020. Prior to that, I have had a little bit of experience
-                        coding in C language as taught in the college. Within the span of almost two years, 
-                        I have made myself familiar with Frontend, Backend, Mobile Application, and Wordpress development
-                        via personal projects mostly and a few client projects. However, as time went by, I have 
-                        committed myself fully to the Frontend aspect of web development which I truly enjoy. 
+                        I am a college dropout who found his way into programming out of complete passion and love of how it works and how things can become possible out of it. Been two years since I started learning web development from free resources such as online tutorial, youtube, and ebooks. I am a fast learner and over the years I have become solution-oriented developer and that mindset has really helped me in carrying out projects that actually focuses on solution instead of the technology behind it. I don't have the working experience yet but I really think I would love working with a team and I learn much much faster when I am mentored because then at least I know what to prioritize my time on. Excellent academic performance in school days has always taught me to always keep working hard and at the same time to enjoy what you do while being creative. Coding to solve problems has become my passion since I first printed HELLO WORLD. 
                     </p>
                 </div>
             </div>
