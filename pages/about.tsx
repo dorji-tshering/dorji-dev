@@ -31,8 +31,7 @@ const about = () => {
                             Typescript with either ReactJs or NextJs.
                         </p>
                         <p className="mb-6">
-                            I have also built a fully featured <a className="text-theme" target="_blank" href="http://https://tuo.shopping">e-commerce website</a> using 
-                            Wordpress and Woocommerce.
+                            I have also built a fully featured e-commerce website using Wordpress and Woocommerce for a client.
                             Now I am fully confident that I can build any 
                             production-ready website with Wordpress to the customization of the client.
                         </p>
