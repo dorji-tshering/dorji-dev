@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.9.1",
+    "@emailjs/browser": "^4.0.0",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/node": "18.19.4",
     "@types/react": "18.2.46",
